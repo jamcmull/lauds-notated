@@ -1,14 +1,8 @@
-name:Alleluia (Dominica per Annum ad Laudes);
-office-part:Antiphona;
-mode:6;
-book:Antiphonale Monasticum, 1934, p. 29;
-transcriber:Jakub Jelínek;
+name: 99-6;
+initial-style: 1;
 annotation: 6F;
+user-notes: Psalm 99.;
+centering-scheme: latin;
 %%
-(c4) JU(f)bi(gh)lá(h)te(h) De(h)o,(h) om(h)<i>nis</i>(g) <b>ter</b>(h)ra:(f.) *(:) ser(h)ví(h)te(h) Dó(h)mi(h)no(h) <i>in</i>(f) <i>læ</i>(gh)<b>tí</b>(g)ti(f)a.(f.) (::)
-2. In(h)tro(h)í(h)te(h) in(h) con(h)spéc(h)<i>tu</i>(g) <b>e</b>(h)jus,(f.) *(:) in(h) ex(h)sul(h)<i>ta</i>(f)<i>ti</i>(gh)<b>ó</b>(g)ne.(f.) (::)
-3. Sci(h)tó(h)te(h) quón(h)i(h)am(h) Dó(h)mi(h)nus(h) ip(h)se(h) <i>est</i>(g) <b>De</b>(h)us:(f.) *(:) ip(h)se(h) fe(h)cit(h) nos,(h) <i>et</i>(f) <i>non</i>(gh) <b>ip</b>(g)si(f) nos.(f.) (::)
-4. Pó(h)pu(h)lus(h) e(h)jus,(h) et(h) o(h)ves(h) pás(h)cu(h)æ(h) e(h)jus: +(g.) in(h)tro(h)í(h)te(h) por(h)tas(h) e(h)jus(h) in(h) con(h)fes(h)<i>si</i>(g)<b>ó</b>(h)ne,(f.) *(:) á(h)tri(h)a(h) e(h)jus(h) in(h) hym(h)nis:(h) con(h)fi(h)té(h)<i>mi</i>(f)<i>ni</i>(gh) <b>il</b>(g)li.(f.) (::)
-5. Lau(h)dá(h)te(h) no(h)men(h) e(h)jus:(h) quón(h)i(h)am(h) su(h)á(h)vis(h) est(h) Dó(h)mi(g)nus, +(g.) in(h) æ(h)tér(h)num(h) mi(h)se(h)ri(h)cór(h)di(h)<i>a</i>(g) <b>e</b>(h)jus,(f.) *(:) et(h) us(h)que(h) in(h) ge(h)ne(h)ra(h)ti(h)ó(h)nem(h) et(h) ge(h)ne(h)ra(h)ti(h)ó(h)nem(h) vé(h)<i>ri</i>(f)<i>tas</i>(gh) <b>e</b>(g)jus.(f.) (::)
-6. Gló(h)ri(h)a(h) Pa(h)tri,(h) <i>et</i>(g) <b>Fí</b>(h)li(f)o,(f.) *(:) et(h) Spi(h)rí(h)<i>tu</i>(f)<i>i</i>(gh) <b>Sanc</b>(g)to.(f.) (::)
-7. Sic(h)ut(h) e(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) <i>et</i>(g) <b>sem</b>(h)per,(f.) *(:) et(h) in(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(h)cu(h)<i>ló</i>(f)<i>rum</i>.(gh) <b>A</b>(g)men.(f.) (::)
+(c4)Ju(f)bi(gh)lá(h)te(h) De(h)o,(h) om(h)<i>nis</i>(g) <b>ter</b>(h fr)ra:(f.) <v>\greheightstar</v>(:) ser(h)ví(h)te(h) Dó(h)mi(h)no(h) <i>in</i>(f) <i>læ</i>(gh)<b>tí</b>(g)ti(fr)a.(f.) (::)
+<i>Flex:</i>()  pás(h)cu(h)æ(h) e(h)jus: + (g. h h h  ::)
