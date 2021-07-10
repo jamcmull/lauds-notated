@@ -1,1 +1,1 @@
-Lauds of the Roman rite with fully notated psalm tones
+Lauds of the Roman rite with partially notated psalm tones
