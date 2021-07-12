@@ -1,0 +1,457 @@
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newcommand{\rubric}[1]{
+	\switchcolumn[0] {
+		\itshape
+		#1
+	}
+}
+
+\newcommand{\latinenglish}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape\small
+		#2
+	}
+}
+
+\newcommand{\latinenglishequal}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape
+		#2
+	}
+}
+
+\newenvironment{latinenglishsection}
+	{\columnratio{.7, .3} \begin{paracol}{2}}
+	{\end{paracol}}
+
+\newenvironment{latinenglishequalsection}
+	{\columnratio{.5, .5}\begin{paracol}{2}}
+	{\end{paracol}}
+
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\heading}[1]{
+	\begin{leftcolumn}
+		#1
+	\end{leftcolumn}
+}
+
+\newcommand{\spanning}[1]{
+	\switchcolumn*[#1]
+}
+
+\newenvironment{verses}[1]
+	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
+	{\end{enumerate} \end{flushleft}}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\newenvironment{collect}
+{
+	\leavevmode
+	\parindent=1em
+	\parskip=0pt
+	\noindent Orémus.\par
+}{}
+
+\newenvironment{optionbox}
+{
+	\switchcolumn[0]
+	\begin{mdframed}
+%	\begin{minipage}{0.8\linewidth}
+}{
+%	\end{minipage}
+	\end{mdframed}
+}
+
+\newcommand{\optionrule}{
+	\begin{center}
+	\rule{0.5\linewidth}{0.6pt}
+	\end{center}
+}
+
+\newenvironment{optionruled}
+{
+	\optionrule
+}
+{
+	\optionrule
+}
+
+% for use inside the collect environment
+\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+
+\begin{document}
+
+\chapter*{Lauds of the Apostle James the Greater\linebreak 25 July 2021}
+
+ \textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium}
+
+\section*{Psalm 92}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/ps92}
+
+2. Etenim firmávit orbem \textbf{ter}ræ,~* qui non \textit{com}\textit{mo}\textbf{vé}bitur.
+
+3. Paráta sedes tua \textbf{ex} tunc:~* a s\'{\ae}\textit{cu}\textit{lo} \textbf{tu} es.
+
+4. Elevavérunt flúmina, \textbf{Dó}mine:~* elevavérunt flúmina \textit{vo}\textit{cem} \textbf{su}am.
+
+5. Elevavérunt flúmina fluctus \textbf{su}os,~* a vócibus aquá\textit{rum} \textit{mul}\textbf{tá}rum.
+
+6. Mirábiles elatiónes \textbf{ma}ris:~* mirábilis in \textit{al}\textit{tis} \textbf{Dó}minus.
+
+7. Testimónia tua credibília facta sunt \textbf{ni}mis:~* domum tuam decet sanctitúdo, Dómine, in longitúdi\textit{nem} \textit{di}\textbf{é}rum.
+
+Glória Patri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
+
+Sicut erat in princípio, et nunc, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
+
+\gresetinitiallines{0}
+\gregorioscore{../fest-apostle/ana-1}
+
+\section*{Psalm 99}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/ps99}
+
+2. Introíte in con\textbf{spéc}tu \textbf{e}jus,~* in exsul\textit{ta}\textit{ti}\textbf{ó}ne.
+
+3. Scitóte quóniam Dóminus \textbf{ip}se est \textbf{De}us:~* ipse fecit nos, \textit{et} \textit{non} \textbf{ip}si nos.
+
+4. Pópulus ejus, et oves páscuæ ejus:~\GreDagger\ introíte portas ejus in con\textbf{fes}si\textbf{ó}ne,~* átria ejus in hymnis: confité\textit{mi}\textit{ni} \textbf{il}li.
+
+5. Laudáte nomen ejus: quóniam suávis est Dóminus,~\GreDagger\ in ætérnum miseri\textbf{cór}dia \textbf{e}jus,~* et usque in generatiónem et generatiónem vé\textit{ri}\textit{tas} \textbf{e}jus.
+
+Glória \textbf{Pa}tri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
+
+Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
+
+\gresetinitiallines{0}
+\gregorioscore{../fest-apostle/ana-2}
+
+\section*{Psalms 62 \& 66}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/ps62}
+
+2. Sitívit in te \textbf{á}nima \textbf{me}a,~* quam multiplíciter tibi \textit{ca}\textit{ro} \textbf{me}a.
+
+3. In terra desérta, et ínvia, et inaquósa:~\GreDagger\ sic in sancto ap\textbf{pá}rui \textbf{ti}bi,~* ut vidérem virtútem tuam, et gló\textit{ri}\textit{am} \textbf{tu}am.
+
+4. Quóniam mélior est misericórdia tua \textbf{su}per \textbf{vi}tas:~* lábia me\textit{a} \textit{lau}\textbf{dá}bunt te.
+
+5. Sic benedícam te in \textbf{vi}ta \textbf{me}a:~* et in nómine tuo levábo \textit{ma}\textit{nus} \textbf{me}as.
+
+6. Sicut ádipe et pinguédine repleátur \textbf{á}nima \textbf{me}a:~* et lábiis exsultatiónis laudá\textit{bit} \textit{os} \textbf{me}um.
+
+7. Si memor fui tui super stratum meum,~\GreDagger\ in matutínis medi\textbf{tá}bor \textbf{in} te:~* quia fuísti ad\textit{jú}\textit{tor} \textbf{me}us.
+
+8. Et in velaménto alárum tuárum exsultábo,~\GreDagger\ adh\'{\ae}sit ánima \textbf{me}a \textbf{post} te:~* me suscépit déx\textit{te}\textit{ra} \textbf{tu}a.
+
+9. Ipsi vero in vanum quæsiérunt ánimam meam,~\GreDagger\ introíbunt in inferi\textbf{ó}ra \textbf{ter}ræ:~* tradéntur in manus gládii, partes vúl\textit{pi}\textit{um} \textbf{e}runt.
+
+10. Rex vero lætábitur in Deo,~\GreDagger\ laudabúntur omnes qui \textbf{ju}rant in \textbf{e}o:~* quia obstrúctum est os loquénti\textit{um} \textit{in}\textbf{í}qua.
+
+\textbf{Ps. 66.} Deus misereátur nostri, et bene\textbf{dí}cat \textbf{no}bis:~* illúminet vultum suum super nos, et misere\textit{á}\textit{tur} \textbf{nos}tri.
+
+2. Ut cognoscámus in terra \textbf{vi}am \textbf{tu}am,~* in ómnibus Géntibus salu\textit{tá}\textit{re} \textbf{tu}um.
+
+3. Confiteántur tibi \textbf{pó}puli, \textbf{De}us:~* confiteántur tibi pó\textit{pu}\textit{li} \textbf{om}nes.
+
+4. Læténtur et ex\textbf{súl}tent \textbf{Gen}tes:~* quóniam júdicas pópulos in æquitáte, et Gentes in \textit{ter}\textit{ra} \textbf{dí}rigis.
+
+5. Confiteántur tibi pópuli, Deus, confiteántur tibi \textbf{pó}puli \textbf{om}nes:~* terra dedit \textit{fruc}\textit{tum} \textbf{su}um.
+
+6. Benedícat nos Deus, Deus noster, bene\textbf{dí}cat nos \textbf{De}us:~* et métuant eum omnes \textit{fi}\textit{nes} \textbf{ter}ræ.
+
+Glória \textbf{Pa}tri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
+
+Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
+
+\gresetinitiallines{0}
+\gregorioscore{../fest-apostle/ana-3}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/benedicite}
+
+2. Benedícite, Ángeli \textbf{Dó}mini, \textbf{Dó}mino:~* benedícite, \textit{cæ}\textit{li}, \textbf{Dó}mino.
+
+3. Benedícite, aquæ omnes, quæ super \textbf{cæ}los sunt, \textbf{Dó}mino:~* benedícite, omnes virtútes Dó\textit{mi}\textit{ni}, \textbf{Dó}mino.
+
+4. Benedícite, sol et \textbf{lu}na, \textbf{Dó}mino:~* benedícite, stellæ \textit{cæ}\textit{li}, \textbf{Dó}mino.
+
+5. Benedícite, omnis imber \textbf{et} ros, \textbf{Dó}mino:~* benedícite, omnes spíritus \textit{De}\textit{i}, \textbf{Dó}mino.
+
+6. Benedícite, ignis et \textbf{æs}tus, \textbf{Dó}mino:~* benedícite, frigus et \textit{æs}\textit{tus}, \textbf{Dó}mino.
+
+7. Benedícite, rores et pru\textbf{í}na, \textbf{Dó}mino:~* benedícite, gelu et \textit{fri}\textit{gus}, \textbf{Dó}mino.
+
+8. Benedícite, glácies et \textbf{ni}ves, \textbf{Dó}mino:~* benedícite, noctes et \textit{di}\textit{es}, \textbf{Dó}mino.
+
+9. Benedícite, lux et \textbf{té}nebræ, \textbf{Dó}mino:~* benedícite, fúlgura et \textit{nu}\textit{bes}, \textbf{Dó}mino.
+
+10. Benedícat \textbf{ter}ra \textbf{Dó}minum:~* laudet et superexáltet e\textit{um} \textit{in} \textbf{s\'{\ae}}cula.
+
+11. Benedícite, montes et \textbf{col}les, \textbf{Dó}mino:~* benedícite, univérsa germinántia in \textit{ter}\textit{ra}, \textbf{Dó}mino.
+
+12. Benedícite, \textbf{fon}tes, \textbf{Dó}mino:~* benedícite, mária et flú\textit{mi}\textit{na}, \textbf{Dó}mino.
+
+13. Benedícite, cete, et ómnia, quæ movéntur in \textbf{a}quis, \textbf{Dó}mino:~* benedícite, omnes vólucres \textit{cæ}\textit{li}, \textbf{Dó}mino.
+
+14. Benedícite, omnes béstiæ et \textbf{pé}cora, \textbf{Dó}mino:~* benedícite, fílii hó\textit{mi}\textit{num}, \textbf{Dó}mino.
+
+15. Benedícat \textbf{Is}raël \textbf{Dó}minum:~* laudet et superexáltet e\textit{um} \textit{in} \textbf{s\'{\ae}}cula.
+
+16. Benedícite, sacerdótes \textbf{Dó}mini, \textbf{Dó}mino:~* benedícite, servi Dó\textit{mi}\textit{ni}, \textbf{Dó}mino.
+
+17. Benedícite, spíritus, et ánimæ jus\textbf{tó}rum, \textbf{Dó}mino:~* benedícite, sancti, et húmiles \textit{cor}\textit{de}, \textbf{Dó}mino.
+
+18. Benedícite, Ananía, Azaría, \textbf{Mí}saël, \textbf{Dó}mino:~* laudáte et superexaltáte e\textit{um} \textit{in} \textbf{s\'{\ae}}cula.
+
+19. Benedicámus Patrem et Fílium cum \textbf{Sanc}to \textbf{Spí}ritu:~* laudémus et superexaltémus e\textit{um} \textit{in} \textbf{s\'{\ae}}cula.
+
+20. Benedíctus es, Dómine, in firma\textbf{mén}to \textbf{cæ}li:~* et laudábilis, et gloriósus, et superexaltá\textit{tus} \textit{in} \textbf{s\'{\ae}}cula.
+
+\gresetinitiallines{0}
+\gregorioscore{../fest-apostle/ana-4}
+
+\section*{Psalms 148, 149, \& 150}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/ps148}
+
+2. Laudáte eum, omnes \textbf{An}geli \textbf{e}jus:~* laudáte eum, omnes vir\textit{tú}\textit{tes} \textbf{e}jus.
+
+3. Laudáte eum, \textbf{sol} et \textbf{lu}na:~* laudáte eum, omnes stel\textit{læ} \textit{et} \textbf{lu}men.
+
+4. Laudáte eum, \textbf{cæ}li cæ\textbf{ló}rum:~* et aquæ omnes, quæ super cælos sunt, laudent \textit{no}\textit{men} \textbf{Dó}mini.
+
+5. Quia ipse \textbf{di}xit, et \textbf{fac}ta sunt:~* ipse mandávit, \textit{et} \textit{cre}\textbf{á}ta sunt.
+
+6. Státuit ea in ætérnum, et in \textbf{s\'{\ae}}culum \textbf{s\'{\ae}}culi:~* præcéptum pósuit, et non \textit{præ}\textit{ter}\textbf{í}bit.
+
+7. Laudáte Dómi\textbf{num} de \textbf{ter}ra,~* dracónes, et om\textit{nes} \textit{a}\textbf{býs}si.
+
+8. Ignis, grando, nix, glácies, spíritus \textbf{pro}cel\textbf{lá}rum:~* quæ fáciunt \textit{ver}\textit{bum} \textbf{e}jus:
+
+9. Montes, et \textbf{om}nes \textbf{col}les:~* ligna fructífera, et \textit{om}\textit{nes} \textbf{ce}dri.
+
+10. Béstiæ, et uni\textbf{vér}sa \textbf{pé}cora:~* serpéntes, et vólu\textit{cres} \textit{pen}\textbf{ná}tæ:
+
+11. Reges terræ, et \textbf{om}nes \textbf{pó}puli:~* príncipes, et omnes jú\textit{di}\textit{ces} \textbf{ter}ræ.
+
+12. Júvenes, et vírgines,~\GreDagger\ senes cum junióribus laudent \textbf{no}men \textbf{Dó}mini:~* quia exaltátum est nomen e\textit{jus} \textit{so}\textbf{lí}us.
+
+13. Conféssio ejus super \textbf{cæ}lum et \textbf{ter}ram:~* et exaltávit cornu pó\textit{pu}\textit{li} \textbf{su}i.
+
+14. Hymnus ómnibus \textbf{sanc}tis \textbf{e}jus:~* fíliis Israël, pópulo appropin\textit{quán}\textit{ti} \textbf{si}bi.
+
+\textbf{Ps. 149.} Cantáte Dómino \textbf{cán}ticum \textbf{no}vum:~* laus ejus in ecclési\textit{a} \textit{sanc}\textbf{tó}rum.
+
+2. Lætétur Israël in eo, qui \textbf{fe}cit \textbf{e}um:~* et fílii Sion exsúltent in \textit{re}\textit{ge} \textbf{su}o.
+
+3. Laudent nomen \textbf{e}jus in \textbf{cho}ro:~* in týmpano, et psaltério \textit{psal}\textit{lant} \textbf{e}i.
+
+4. Quia beneplácitum est Dómino in \textbf{pó}pulo \textbf{su}o:~* et exaltábit mansuétos \textit{in} \textit{sa}\textbf{lú}tem.
+
+5. Exsultábunt \textbf{sanc}ti in \textbf{gló}ria:~* lætabúntur in cubí\textit{li}\textit{bus} \textbf{su}is.
+
+6. Exaltatiónes Dei in gúttu\textbf{re} e\textbf{ó}rum:~* et gládii ancípites in máni\textit{bus} \textit{e}\textbf{ó}rum.
+
+7. Ad faciéndam vindíctam in \textbf{na}ti\textbf{ó}nibus:~* increpatió\textit{nes} \textit{in} \textbf{pó}pulis.
+
+8. Ad alligándos reges eórum \textbf{in} com\textbf{pé}dibus:~* et nóbiles eórum in má\textit{ni}\textit{cis} \textbf{fér}reis.
+
+9. Ut fáciant in eis judíci\textbf{um} con\textbf{scríp}tum:~* glória hæc est ómnibus \textit{sanc}\textit{tis} \textbf{e}jus.
+
+\textbf{Ps. 150.} Laudáte Dóminum in \textbf{sanc}tis \textbf{e}jus:~* laudáte eum in firmaménto vir\textit{tú}\textit{tis} \textbf{e}jus.
+
+2. Laudáte eum in vir\textbf{tú}tibus \textbf{e}jus:~* laudáte eum secúndum multitúdinem magnitú\textit{di}\textit{nis} \textbf{e}jus.
+
+3. Laudáte eum in \textbf{so}no \textbf{tu}bæ:~* laudáte eum in psaltéri\textit{o}, \textit{et} \textbf{cí}thara.
+
+4. Laudáte eum in týmpa\textbf{no}, et \textbf{cho}ro:~* laudáte eum in chor\textit{dis}, \textit{et} \textbf{ór}gano.
+
+5. Laudáte eum in cýmbalis benesonántibus:~\GreDagger\ laudáte eum in cýmbalis jubi\textbf{la}ti\textbf{ó}nis:~* omnis spíritus \textit{lau}\textit{det} \textbf{Dó}minum.
+
+Glória \textbf{Pa}tri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
+
+Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
+
+\gresetinitiallines{0}
+\gregorioscore{../fest-apostle/ana-5}
+
+\section*{Little Chapter (Ephes. 2:19-20)}
+
+\textit{All stand.}
+
+\gresetinitiallines{1}
+\gabcsnippet{
+(c3) FRa(h)tres:(h) (,) Jam(h) non(h) es(h)tis(h) hós(h)pi(h)tes(h) et(h) ád(h)ve(f)næ:(f) (;)
+sed(h) es(h)tis(h) ci(h)ves(h) sanc(h)tó(h)rum(h) et(h) do(h)més(h)ti(h)ci(h) De(h)i:(h) (,)
+su(h)per(h)æ(h)di(h)fi(h)cá(h)ti(h) su(h)per(h) fun(h)da(h)mén(h)tum(h) A(h)pos(h)to(h)ló(h)rum(h) et(h) Pro(g)phe(f)tá(h)rum,(h) (;)
+ip(h)so(h) sum(h)mo(h) an(h)gu(h)lá(h)ri(h) lá(h)pi(h)de(h) Chris(h)to(h) Je(f)su.(ef..) (::)
+<sp>R/</sp>. De(h)o(h) grá(f)ti(e)as.(ef..) (::)
+}
+
+\section*{Hymn}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/hymn-exsultet-caelum-laudibus}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+(c3) <sp>V/</sp>. An(h)nun(h)ti(h)a(h)vé(h)runt(h) ó(h)pe(h)ra(h) De(h)i.(g'_/hvGF'E/fgf.) (::)
+}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+(c3) <sp>R/</sp>. Et(h) fac(h)ta(h) e(h)jus(h) in(h)tel(h)le(h)xé(h)runt.(g'_/hvGF'E/fgf.) (::)
+}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{../fest-apostle/benedictus}
+
+2. Et eréxit cornu sa\textbf{lú}tis \textbf{no}bis:~* in domo David, pú\textit{e}\textit{ri} \textbf{su}i.
+
+3. Sicut locútus est per \textbf{os} sanc\textbf{tó}rum,~* qui a s\'{\ae}culo sunt, prophe\textit{tá}\textit{rum} \textbf{e}jus:
+
+4. Salútem ex ini\textbf{mí}cis \textbf{nos}tris,~* et de manu ómnium, \textit{qui} \textit{o}\textbf{dé}runt nos.
+
+5. Ad faciéndam misericórdiam cum \textbf{pá}tribus \textbf{nos}tris:~* et memorári testaménti \textit{su}\textit{i} \textbf{sanc}ti.
+
+6. Jusjurándum, quod jurávit ad Abraham \textbf{pa}trem \textbf{nos}trum,~* datú\textit{rum} \textit{se} \textbf{no}bis:
+
+7. Ut sine timóre, de manu inimicórum nostrórum \textbf{li}be\textbf{rá}ti,~* servi\textit{á}\textit{mus} \textbf{il}li.
+
+8. In sanctitáte, et justítia \textbf{co}ram \textbf{ip}so,~* ómnibus di\textit{é}\textit{bus} \textbf{nos}tris.
+
+9. Et tu, puer, Prophéta Altíssi\textbf{mi} vo\textbf{cá}beris:~* præíbis enim ante fáciem Dómini, paráre \textit{vi}\textit{as} \textbf{e}jus:
+
+10. Ad dandam sciéntiam salútis \textbf{ple}bi \textbf{e}jus:~* in remissiónem peccató\textit{rum} \textit{e}\textbf{ó}rum:
+
+11. Per víscera misericórdiæ \textbf{De}i \textbf{nos}tri:~* in quibus visitávit nos, óri\textit{ens} \textit{ex} \textbf{al}to:
+
+12. Illumináre his, qui in ténebris, et in umbra \textbf{mor}tis \textbf{se}dent:~* ad dirigéndos pedes nostros in \textit{vi}\textit{am} \textbf{pa}cis.
+
+Glória \textbf{Pa}tri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
+
+Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
+
+\gresetinitiallines{0}
+\gregorioscore{../fest-apostle/ana-ben}
+
+\section*{Oration}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) <sp>V/</sp>. Dó(g)mi(h)ne(h) e(h)xáu(h)di(g) o(g)ra(g)ti(g)ó(g)nem(h) me(hg)am.(g.) (::)
+	<sp>R/</sp>. Et(g) cla(h)mor(h) me(h)us(g) ad(g) te(g) vé(h)ni(h)at.(h.) (::) O(h)ré(gh)mus.(h.) (:)
+}
+
+Esto, Dómine, plebi tuæ sanctificátor et custos:~\GreDagger\
+ut, Apóstoli tui Jacóbi muníta præsídiis, et conversatióne tibi pláceat, et secúra ment\textit{e de}\textbf{sér}viat.
+Per Dóminum nostrum Jesum Christum fílium tuum,~\GreDagger\
+qui tecum vivit et regnat in unitáte Spíritus \textit{Sancti} \textbf{De}us,
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) Per(g) óm(h)ni(h)a(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(g)cu(h)ló(hg)rum.(g.) <sp>R/</sp>.(::) A(g.)men.(h.) (::)
+}
+
+\section*{Commemoration of the Ninth Sunday after Pentecost}
+
+\gresetinitiallines{1}
+\gregorioscore{ana-dom-9-post-pent}
+
+\begin{versicles}
+\Vbar. Dóminus regnávit, decórem índuit.
+
+\Rbar. Induit Dóminus fortitúdinem, et præcínxit se virtúte.
+\end{versicles}
+
+Orémus.
+Páteant aures misericórdiæ tuæ, Dómine, précibus supplicántium:~\GreDagger\
+et, ut peténtibus desideráta concédas; fac eos quæ tibi sunt plácita, \textit{postu}\textbf{lá}re.
+
+\section*{Commemoration of St. Christopher, Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/one-martyr}
+
+\begin{versicles}
+\Vbar. Justus ut palma florébit.
+
+\Rbar. Sicut cedrus Líbani multiplicábitur.
+\end{versicles}
+
+Orémus.
+Præsta q\'{\ae}sumus omnípotens Deus:~\GreDagger\
+ut qui béati Christóphori Mártyris tui natalítia cólimus, intercessióne ejus in tui nóminis amóre \textit{robo}\textbf{ré}mur.
+Per Dóminum nostrum Jesum Christum fílium tuum,~\GreDagger\
+qui tecum vivit et regnat in unitáte Spíritus \textit{Sancti} \textbf{De}us,
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) Per(g) óm(h)ni(h)a(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(g)cu(h)ló(hg)rum.(g.) <sp>R/</sp>.(::) A(g.)men.(h.) (::)
+	<sp>V/</sp>. Dó(g)mi(h)ne(h) e(h)xáu(h)di(g) o(g)ra(g)ti(g)ó(g)nem(h) me(hg)am.(g.) (::)
+	<sp>R/</sp>. Et(g) cla(h)mor(h) me(h)us(g) ad(g) te(g) vé(h)ni(h)at.(h.) (::)
+}
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus-double}
+
+\textit{In a low voice:}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) <sp>V/</sp>. Fi(e)dé(e)li(e)um(e) á(e)ni(e)mæ,(e) per(e) mi(e)se(e)ri(e)cór(e)di(e)am(e) De(e)i,(e) re(e)qui(e)és(e)cant(e) in(e) pa(e)ce.(e.)
+	<sp>R/</sp>.(::) A(e.)men.(e.) (::)
+}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) <sp>V/</sp>. Dó(e)mi(e)nus(e) det(e) no(e)bis(e) su(e)am(e) pa(e)cem.(e.)
+	<sp>R/</sp>.(::) Et(e) vi(e)tam(e) æ(e)tér(e)nam.(e) A(e)men.(e.) (::)
+}
+
+\textit{The Marian anthem appropriate to the season follows.}
+
+\end{document}
