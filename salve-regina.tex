@@ -1,0 +1,159 @@
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newcommand{\rubric}[1]{
+	\switchcolumn[0] {
+		\itshape
+		#1
+	}
+}
+
+\newcommand{\latinenglish}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape\small
+		#2
+	}
+}
+
+\newcommand{\latinenglishequal}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape
+		#2
+	}
+}
+
+\newenvironment{latinenglishsection}
+	{\columnratio{.7, .3} \begin{paracol}{2}}
+	{\end{paracol}}
+
+\newenvironment{latinenglishequalsection}
+	{\columnratio{.5, .5}\begin{paracol}{2}}
+	{\end{paracol}}
+
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\heading}[1]{
+	\begin{leftcolumn}
+		#1
+	\end{leftcolumn}
+}
+
+\newcommand{\spanning}[1]{
+	\switchcolumn*[#1]
+}
+
+\newenvironment{verses}[1]
+	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
+	{\end{enumerate} \end{flushleft}}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\newenvironment{collect}
+{
+	\leavevmode
+	\parindent=1em
+	\parskip=0pt
+	\noindent Orémus.\par
+}{}
+
+\newenvironment{optionbox}
+{
+	\switchcolumn[0]
+	\begin{mdframed}
+%	\begin{minipage}{0.8\linewidth}
+}{
+%	\end{minipage}
+	\end{mdframed}
+}
+
+\newcommand{\optionrule}{
+	\begin{center}
+	\rule{0.5\linewidth}{0.6pt}
+	\end{center}
+}
+
+\newenvironment{optionruled}
+{
+	\optionrule
+}
+{
+	\optionrule
+}
+
+% for use inside the collect environment
+\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+
+\begin{document}
+
+\section*{Salve Regina (Simple Tone)}
+
+\textit{This Marian anthem is sung from First Vespers of Trinity Sunday (inclusive) until Vespers of the Saturday before the First Sunday of Advent (exclusive).}
+
+\gresetinitiallines{1}
+\gregorioscore{salve-regina-simple}
+
+\begin{versicles}
+\Vbar. Ora pro nobis, sancta Dei Génitrix.
+
+\Rbar. Ut digni efficiámur promissiónibus Christi.
+\end{versicles}
+
+Orémus.
+Omnípotens sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam,
+ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte, præparásti:~\GreDagger\
+da, ut cujus commemoratión\textit{e læ}\textbf{tá}mur,~*
+ejus pia intercessióne ab instántibus malis et a morte perpétua liberémur.
+Per eúmdem Christum Dóminum nostrum.
+
+\gresetinitiallines{0}
+\gabcsnippet{
+(c3) <sp>R/</sp>. A(g.)men.(h.) (::)
+}
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+Hail holy Queen, Mother of mercy, our life, our sweetness, and our hope.
+To thee do we cry, poor banished children of Eve;
+to thee do we send up our sighs, mourning and weeping in this valley of tears.
+Turn then, O most gracious advocate, thine eyes of mercy towards us,
+and after this our exile, show unto us the blessed fruit of thy womb, Jesus.
+O clement, O loving, O sweet virgin Mary.
+
+Pray for us, O holy Mother of God.
+\Rbar.~That we may be made worthy of the promises of Christ.
+
+Let us pray.
+O almighty everlasting God, who, by the cooperation of the Holy Ghost,
+didst prepare the body and soul of Mary, glorious Virgin and Mother,
+to become the worthy habitation of Thy Son;
+grant that we may be delivered from present evils and from everlasting death by her pious intercession,
+in whose commemoration we rejoice.
+Through the same Christ our Lord.
+\Rbar.~Amen.
+
+\end{document}
