@@ -1,0 +1,173 @@
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newcommand{\rubric}[1]{
+	\switchcolumn[0] {
+		\itshape
+		#1
+	}
+}
+
+\newcommand{\latinenglish}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape\small
+		#2
+	}
+}
+
+\newcommand{\latinenglishequal}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape
+		#2
+	}
+}
+
+\newenvironment{latinenglishsection}
+	{\columnratio{.7, .3} \begin{paracol}{2}}
+	{\end{paracol}}
+
+\newenvironment{latinenglishequalsection}
+	{\columnratio{.5, .5}\begin{paracol}{2}}
+	{\end{paracol}}
+
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\heading}[1]{
+	\begin{leftcolumn}
+		#1
+	\end{leftcolumn}
+}
+
+\newcommand{\spanning}[1]{
+	\switchcolumn*[#1]
+}
+
+\newenvironment{verses}[1]
+	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
+	{\end{enumerate} \end{flushleft}}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\newenvironment{collect}
+{
+	\leavevmode
+	\parindent=1em
+	\parskip=0pt
+	\noindent Orémus.\par
+}{}
+
+\newenvironment{optionbox}
+{
+	\switchcolumn[0]
+	\begin{mdframed}
+%	\begin{minipage}{0.8\linewidth}
+}{
+%	\end{minipage}
+	\end{mdframed}
+}
+
+\newcommand{\optionrule}{
+	\begin{center}
+	\rule{0.5\linewidth}{0.6pt}
+	\end{center}
+}
+
+\newenvironment{optionruled}
+{
+	\optionrule
+}
+{
+	\optionrule
+}
+
+% for use inside the collect environment
+\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+
+\begin{document}
+
+\chapter*{Lauds of the Eleventh Sunday after Pentecost\\August 8, 2021}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+2. Et eréxit cornu salútis \textbf{no}bis:~* in domo David, \textbf{pú}eri \textbf{su}i.
+
+3. Sicut locútus est per os sanc\textbf{tó}rum,~* qui a s\'{\ae}culo sunt, prophe\textbf{tá}rum \textbf{e}jus:
+
+4. Salútem ex inimícis \textbf{nos}tris,~* et de manu ómnium, \textbf{qui} o\textbf{dé}runt nos.
+
+5. Ad faciéndam misericórdiam cum pátribus \textbf{nos}tris:~* et memorári testaménti \textbf{su}i \textbf{sanc}ti.
+
+6. Jusjurándum, quod jurávit ad Abraham patrem \textbf{nos}trum,~* da\textbf{tú}rum se \textbf{no}bis:
+
+7. Ut sine timóre, de manu inimicórum nostrórum libe\textbf{rá}ti,~* servi\textbf{á}mus \textbf{il}li.
+
+8. In sanctitáte, et justítia coram \textbf{ip}so,~* ómnibus di\textbf{é}bus \textbf{nos}tris.
+
+9. Et tu, puer, Prophéta Altíssimi vo\textbf{cá}beris:~* præíbis enim ante fáciem Dómini, paráre \textbf{vi}as \textbf{e}jus:
+
+10. Ad dandam sciéntiam salútis plebi \textbf{e}jus:~* in remissiónem pecca\textbf{tó}rum e\textbf{ó}rum:
+
+11. Per víscera misericórdiæ Dei \textbf{nos}tri:~* in quibus visitávit nos, óri\textbf{ens} ex \textbf{al}to:
+
+12. Illumináre his, qui in ténebris, et in umbra mortis \textbf{se}dent:~* ad dirigéndos pedes nostros in \textbf{vi}am \textbf{pa}cis.
+
+Glória Patri, et \textbf{Fí}lio,~* et Spi\textbf{rí}tui \textbf{Sanc}to.
+
+Sicut erat in princípio, et nunc, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textbf{ló}rum. \textbf{A}men.
+%⎄\pagebreak
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+Orémus.
+Omnípotens sempitérne Deus, qui, abundántia pietátis tuæ, et mérita súpplicum excédis et vota:~\GreDagger\
+effúnde super nos misericórdiam tuam; ut dimíttas quæ consciéntia métuit, et adjícias quod orátio \textit{non præ}\textbf{sú}mit.
+Per Dóminum.
+
+\section*{Comm. of Sts. Cyriacus, Largus and Smaragdus, Martyrs}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/many-martyrs}
+
+\begin{versicles}
+\Vbar. Exsultábunt Sancti in glória.
+
+\Rbar. Lætabúntur in cubílibus suis.
+\end{versicles}
+
+Orémus.
+Deus, qui nos ánnua sanctórum Mártyrum tuórum Cyriáci, Largi et Smarágdi sollemnitáte lætíficas:~\GreDagger\
+concéde propítius; ut, quorum natalítia cólimus, virtútem quoque passiónis \textit{imi}\textbf{té}mur.
+Per Dóminum.
+
+\textit{Then the suffrages are said.}
+
+\end{document}
