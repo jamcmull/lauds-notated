@@ -1,0 +1,169 @@
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newcommand{\rubric}[1]{
+	\switchcolumn[0] {
+		\itshape
+		#1
+	}
+}
+
+\newcommand{\latinenglish}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape\small
+		#2
+	}
+}
+
+\newcommand{\latinenglishequal}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape
+		#2
+	}
+}
+
+\newenvironment{latinenglishsection}
+	{\columnratio{.7, .3} \begin{paracol}{2}}
+	{\end{paracol}}
+
+\newenvironment{latinenglishequalsection}
+	{\columnratio{.5, .5}\begin{paracol}{2}}
+	{\end{paracol}}
+
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\heading}[1]{
+	\begin{leftcolumn}
+		#1
+	\end{leftcolumn}
+}
+
+\newcommand{\spanning}[1]{
+	\switchcolumn*[#1]
+}
+
+\newenvironment{verses}[1]
+	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
+	{\end{enumerate} \end{flushleft}}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\newenvironment{collect}
+{
+	\leavevmode
+	\parindent=1em
+	\parskip=0pt
+	\noindent Orémus.\par
+}{}
+
+\newenvironment{optionbox}
+{
+	\switchcolumn[0]
+	\begin{mdframed}
+%	\begin{minipage}{0.8\linewidth}
+}{
+%	\end{minipage}
+	\end{mdframed}
+}
+
+\newcommand{\optionrule}{
+	\begin{center}
+	\rule{0.5\linewidth}{0.6pt}
+	\end{center}
+}
+
+\newenvironment{optionruled}
+{
+	\optionrule
+}
+{
+	\optionrule
+}
+
+% for use inside the collect environment
+\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+
+\begin{document}
+
+\chapter*{Lauds of the 3rd Sunday after Epiphany\\23 January 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\pagebreak
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Omnípotens sempitérne Deus, infirmitátem nostram propítius réspice:~\GreDagger\
+atque, ad protegéndum nos,~*
+déxteram tuæ majestátis exténde.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{Commemoration of St. Raymond of Penyafort, Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-non-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Raymúndum pœniténtiæ sacraménti insígnem minístrum elegísti, et per maris undas mirabíliter traduxísti:~\GreDagger\
+concéde; ut ejus intercessióne dignos pœniténtiæ fructus fácere,~*
+et ad ætérnæ salútis portum perveníre valeámus.
+
+\section*{Commemoration of St. Emerentiana, Virgin and Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/one-virgin}
+
+\begin{versicles}
+\Vbar. Diffúsa est grátia in lábiis tuis.
+
+\Rbar. Proptérea benedíxit te Deus in ætérnum.
+\end{versicles}
+
+Orémus.
+Indulgéntiam nobis, quǽsumus, Dómine, beáta Emerentiána Virgo et Martyr implóret:~*
+quæ tibi grata semper éxstitit, et mérito castitátis, et tuæ professióne virtútis.
+
+\textit{The suffrages are said.}
+
+\end{document}
