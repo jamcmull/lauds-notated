@@ -1,0 +1,170 @@
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newcommand{\rubric}[1]{
+	\switchcolumn[0] {
+		\itshape
+		#1
+	}
+}
+
+\newcommand{\latinenglish}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape\small
+		#2
+	}
+}
+
+\newcommand{\latinenglishequal}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape
+		#2
+	}
+}
+
+\newenvironment{latinenglishsection}
+	{\columnratio{.7, .3} \begin{paracol}{2}}
+	{\end{paracol}}
+
+\newenvironment{latinenglishequalsection}
+	{\columnratio{.5, .5}\begin{paracol}{2}}
+	{\end{paracol}}
+
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\heading}[1]{
+	\begin{leftcolumn}
+		#1
+	\end{leftcolumn}
+}
+
+\newcommand{\spanning}[1]{
+	\switchcolumn*[#1]
+}
+
+\newenvironment{verses}[1]
+	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
+	{\end{enumerate} \end{flushleft}}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\newenvironment{collect}
+{
+	\leavevmode
+	\parindent=1em
+	\parskip=0pt
+	\noindent Orémus.\par
+}{}
+
+\newenvironment{optionbox}
+{
+	\switchcolumn[0]
+	\begin{mdframed}
+%	\begin{minipage}{0.8\linewidth}
+}{
+%	\end{minipage}
+	\end{mdframed}
+}
+
+\newcommand{\optionrule}{
+	\begin{center}
+	\rule{0.5\linewidth}{0.6pt}
+	\end{center}
+}
+
+\newenvironment{optionruled}
+{
+	\optionrule
+}
+{
+	\optionrule
+}
+
+% for use inside the collect environment
+\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+
+\begin{document}
+
+\chapter*{Lauds of the 5th Sunday after Epiphany\\6 February 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1}
+
+\pagebreak
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Famíliam tuam, qu\'{\ae}sumus, Dómine, contínua pietáte custódi:~\GreDagger\
+ut, quæ in sola spe grátiæ cœléstis innítitur,~*
+tua semper protectióne muniátur.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{St. Titus, Bishop and Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Titum Confessórem tuum atque Pontíficem apostólicis virtútibus decorásti:~\GreDagger\
+ejus méritis et intercessióne concéde; ut juste et pie vivéntes in hoc sǽculo,~*
+ad cæléstem pátriam perveníre mereámur.
+
+\section*{St. Dorothy, Virgin and Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/one-virgin}
+
+\begin{versicles}
+\Vbar. Diffúsa est grátia in lábiis tuis.
+
+\Rbar. Proptérea benedíxit te Deus in ætérnum.
+\end{versicles}
+
+Orémus.
+Indulgéntiam nobis, quǽsumus, Dómine, beáta Doróthea Virgo et Martyr implóret:~*
+quæ tibi gráta semper éxstitit, et mérito castitátis, et tuæ professióne virtútis.
+Per Dóminum.
+
+\textit{The suffrages are omitted.}
+
+\end{document}
