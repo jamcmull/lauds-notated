@@ -1,0 +1,251 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newcommand{\rubric}[1]{
+	\switchcolumn[0] {
+		\itshape
+		#1
+	}
+}
+
+\newcommand{\latinenglish}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape\small
+		#2
+	}
+}
+
+\newcommand{\latinenglishequal}[2]{
+	\switchcolumn[0]* {
+		#1
+	}
+	\switchcolumn[1] {
+		\itshape
+		#2
+	}
+}
+
+\newenvironment{latinenglishsection}
+	{\columnratio{.7, .3} \begin{paracol}{2}}
+	{\end{paracol}}
+
+\newenvironment{latinenglishequalsection}
+	{\columnratio{.5, .5}\begin{paracol}{2}}
+	{\end{paracol}}
+
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\heading}[1]{
+	\begin{leftcolumn}
+		#1
+	\end{leftcolumn}
+}
+
+\newcommand{\spanning}[1]{
+	\switchcolumn*[#1]
+}
+
+\newenvironment{verses}[1]
+	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
+	{\end{enumerate} \end{flushleft}}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\newenvironment{collect}
+{
+	\leavevmode
+	\parindent=1em
+	\parskip=0pt
+	\noindent Orémus.\par
+}{}
+
+\newenvironment{optionbox}
+{
+	\switchcolumn[0]
+	\begin{mdframed}
+%	\begin{minipage}{0.8\linewidth}
+}{
+%	\end{minipage}
+	\end{mdframed}
+}
+
+\newcommand{\optionrule}{
+	\begin{center}
+	\rule{0.5\linewidth}{0.6pt}
+	\end{center}
+}
+
+\newenvironment{optionruled}
+{
+	\optionrule
+}
+{
+	\optionrule
+}
+
+% for use inside the collect environment
+\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+
+\begin{document}
+
+\chapter*{Lauds on the Second Sunday of Lent}
+
+ \textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium-laus-tibi}
+
+\section*{Psalm 50}
+
+\gresetinitiallines{1}
+\gregorioscore{ps50}
+
+\input{../psalms/50-7}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-1}
+
+\section*{Psalm 117}
+
+\gresetinitiallines{1}
+\gregorioscore{ps117}
+
+\input{../psalms/117-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-2}
+
+\section*{Psalms 62 \& 66}
+
+\gresetinitiallines{1}
+\gregorioscore{ps62}
+
+\input{../psalms/62-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-3}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{benedicite}
+
+\input{../psalms/benedicite-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-4}
+
+\section*{Psalms 148, 149, \& 150}
+
+\gresetinitiallines{1}
+\gregorioscore{ps148}
+
+\input{../psalms/148-7}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-5}
+
+\section*{Little Chapter (1 Thess. 4:1)}
+
+\textit{All stand.}
+
+Fratres: Rogámus vos, et obsecrámus in Dómino Jesu:~\GreDagger\
+ut, quemádmodum accepístis a nobis, quómodo vos opórteat ambuláre, et placére Deo,~*
+sic et ambulétis, ut abundétis magis.
+\Rbar.~Deo grátias.
+
+\section*{Hymn}
+
+\gresetinitiallines{1}
+\gregorioscore{../hymn-iam-christe}
+
+\begin{versicles}
+\Vbar. Angelis suis Deus mandávit de te.
+
+\Rbar. Ut custódiant te in ómnibus viis tuis.
+\end{versicles}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-2}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+\begin{versicles}
+\Vbar. Dómine exáudi oratiónem meam.
+
+\Rbar. Et clamor meus ad te véniat.
+\end{versicles}
+
+Orémus.
+Deus, qui cónspicis omni nos virtúte destítui: intérius exteriúsque custódi;~\GreDagger\
+ut ab ómnibus adversitátibus muniámur in córpore,~*
+et a právis cogitatiónibus mundémur in mente.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{Suffrages}
+
+\input{../suffrages}
+
+\Rbar.~Amen.
+
+\begin{versicles}
+\Vbar. Dómine exáudi oratiónem meam.
+
+\Rbar. Et clamor meus ad te véniat.
+\end{versicles}
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus-advent-lent-sundays}
+
+\textit{In a low voice:}
+
+\begin{versicles}
+\Vbar.~Fidelium ánimæ, per misericórdiam Dei, requiéscant in pace.
+
+\Rbar.~Amen.
+\end{versicles}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\begin{versicles}
+\Vbar. Dóminus det nobis suam pacem.
+
+\Rbar. Et vitam ætérnam. Amen.
+\end{versicles}
+
+\textit{The Marian anthem \textnormal{Ave Regina cælorum} follows.}
+
+\end{document}
