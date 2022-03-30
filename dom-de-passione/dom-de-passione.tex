@@ -1,0 +1,157 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds on the Fourth Sunday of Lent}
+
+\textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium-laus-tibi}
+
+\section*{Psalm 50}
+
+\gresetinitiallines{1}
+\gregorioscore{ps50}
+
+\input{../psalms/50-7}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-1}
+
+\section*{Psalm 117}
+
+\gresetinitiallines{1}
+\gregorioscore{ps117}
+
+\input{../psalms/117-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-2}
+
+\section*{Psalms 62 \& 66}
+
+\gresetinitiallines{1}
+\gregorioscore{ps62}
+
+\input{../psalms/62-7}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-3}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{benedicite}
+
+\input{../psalms/benedicite-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-4}
+
+\section*{Psalms 148, 149, \& 150}
+
+\gresetinitiallines{1}
+\gregorioscore{ps148}
+
+\input{../psalms/148-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-5}
+
+\section*{Little Chapter (Galat. 4:22-24)}
+
+\textit{All stand.}
+
+Fratres: Scriptum est, quóniam Abraham duos fílios hábuit: unum de ancílla, et unum de líbera:~\GreDagger\
+sed qui de ancílla, secúndum carnem natus est: qui autem de líbera, per repromissiónem:~*
+quæ sunt per allegoríam dicta.
+\Rbar.~Deo grátias.
+
+\section*{Hymn}
+
+\gresetinitiallines{1}
+\gregorioscore{../hymn-iam-christe}
+
+\begin{versicles}
+\Vbar. Angelis suis Deus mandávit de te.
+
+\Rbar. Ut custódiant te in ómnibus viis tuis.
+\end{versicles}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+\begin{versicles}
+\Vbar. Dómine exáudi oratiónem meam.
+
+\Rbar. Et clamor meus ad te véniat.
+\end{versicles}
+
+Orémus.
+Concéde, qu\'{\ae}sumus, omnípotens Deus:~\GreDagger\
+ut, qui ex mérito nostræ actiónis afflígimur,~*
+tuæ grátiæ consolatióne respirémus.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{Suffrages}
+
+\input{../suffrages}
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus-advent-lent-sundays}
+
+\textit{In a low voice:}
+
+\begin{versicles}
+\Vbar.~Fidelium ánimæ, per misericórdiam Dei, requiéscant in pace.
+
+\Rbar.~Amen.
+\end{versicles}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\begin{versicles}
+\Vbar. Dóminus det nobis suam pacem.
+
+\Rbar. Et vitam ætérnam. Amen.
+\end{versicles}
+
+\textit{The Marian anthem \textnormal{Ave Regina cælorum} follows.}
+
+\end{document}
