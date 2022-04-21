@@ -1,0 +1,65 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Commemorations for Holy Week}
+
+\section*{St. Leo I, Pope and Doctor\\Holy Monday}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Exáudi, qu\'{'ae}sumus Dómine, preces nostras, quas in béati Leónis Confessóris tui atque Pontíficis solemnitáte deférimus:~\GreDagger\
+et qui tibi digne méruit famulári, ejus intercedéntibus méritis,~*
+ab ómnibus nos absólve peccátis.
+Per Dóminum.
+
+\section*{St. Hermenegild, Martyr\\Holy Wednesday}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/one-martyr}
+
+\begin{versicles}
+\Vbar. Justus ut palma florébit.
+
+\Rbar. Sicut cedrus Líbani multiplicábitur.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Hermenegíldum Mártyrem tuum cælésti regno terrénum postpónere docuísti:~\GreDagger\
+a qu\'{'ae}sumus nobis; ejus exémplo cadúca despícere,~*
+atque ætérna sectári.
+Per Dóminum.
+
+\end{document}
