@@ -1,0 +1,182 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds in Paschaltide}
+
+\textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium}
+
+\textit{On ferias, the following tone is used:}
+
+\gresetinitiallines{0}
+\gregorioscore{../deus-in-adjutorium-ferial}
+
+\section*{Psalm 92}
+
+\textit{The antiphons are doubled on Low Sunday.}
+
+\gresetinitiallines{1}
+\gregorioscore{ps92}
+
+\input{../psalms/92-8}
+
+\section*{Psalm 99}
+
+\gresetinitiallines{0}
+\gregorioscore{ps99}
+
+\input{../psalms/99-8}
+
+\section*{Psalms 62 \& 66}
+
+\gresetinitiallines{0}
+\gregorioscore{ps62}
+
+\input{../psalms/62-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-1}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{benedicite}
+
+\input{../psalms/benedicite-6}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-2}
+
+\section*{Psalms 148, 149, \& 150}
+
+\gresetinitiallines{1}
+\gregorioscore{ps148}
+
+\input{../psalms/148-6}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-3}
+
+\section*{Little Chapter}
+
+\textit{All stand. The Little Chapter is proper on Sundays of Paschaltide. On ferias, it is as follows \textnormal{(Rom. 6:9-10)}:}
+
+Christus resúrgens ex mórtuis jam non móritur, mors illi ultra non dominábitur.~\GreDagger\
+Quod enim mórtuus est peccáto, mórtuus est semel:~*
+quod autem vivit, vivit Deo.
+\Rbar.~Deo grátias.
+
+\section*{Hymn}
+
+\gresetinitiallines{1}
+\gregorioscore{../hymni/hymn-aurora-lucis-rutilat}
+
+\begin{versicles}
+\Vbar. In resurrectióne tua, Christe, allelúja.
+
+\Rbar. Cæli et terra læténtur, allelúja.
+\end{versicles}
+
+\section*{Benedictus}
+
+\textit{The antiphon and tone of the Benedictus are proper to the day.}
+
+\section*{Oration}
+
+\begin{versicles}
+\Vbar. Dómine exáudi oratiónem meam.
+
+\Rbar. Et clamor meus ad te véniat.
+\end{versicles}
+
+\textit{The oration is proper to the day.}
+
+\Rbar.~Amen.
+
+\textit{Commememorations of occuring feasts are then said if there are any, followed by the Paschaltide commemoration of the Cross. The commemoration of the Cross is ommitted on Low Sunday and within octaves. Each commemoration or suffrage has an antiphon, versicle and response, and prayer. The conclusion of the prayer is omitted for all but the last.}
+
+\subsection*{Commemoration of the Cross}
+\gresetinitiallines{1}
+\gregorioscore{../suffragia/crucifixus}
+
+\begin{versicles}
+\Vbar. Dícite in natiónibus, allelúja.
+
+\Rbar. Quia Dóminus regnávit a ligno, allelúja.
+\end{versicles}
+
+Orémus.
+Deus qui pro nobis Fílium tuum Crucis patíbulum subíre voluísti, ut inimíci a nobis expélleres potestátem:~*
+concéde nobis fámulis tuis; ut resurrectiónis grátiam consequámur.
+Per eúndem Dóminum.
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus/benedicamus-paschaltide}
+
+\textit{In a low voice:}
+
+\begin{versicles}
+\Vbar.~Fidelium ánimæ, per misericórdiam Dei, requiéscant in pace.
+
+\Rbar.~Amen.
+\end{versicles}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\begin{versicles}
+\Vbar. Dóminus det nobis suam pacem.
+
+\Rbar. Et vitam ætérnam. Amen.
+\end{versicles}
+
+\section*{Marian Anthem}
+
+\gresetinitiallines{1}
+\gregorioscore{../marian-antiphons/regina-caeli-simple}
+
+\begin{versicles}
+\Vbar. Gaude et lætáre, Virgo María, allelúja.
+
+\Rbar. Quia surréxit Dóminus vere, allelúja.
+\end{versicles}
+
+Orémus.
+Deus, qui per resurrectiónem Fílii tui, Dómini nostri Jesu Christi, mundum lætificáre dignátus es:~\GreDagger\
+præsta, qu\'{\ae}sumus; ut, per eíus Genetrícem Vírginem Maríam,~*
+perpétuæ capiámus gáudia vitæ.
+Per eúmdem Christum Dóminum nostrum. \Rbar. Amen.
+
+\begin{versicles}
+\Vbar. Divínum auxílium + máneat semper nobíscum.
+
+\Rbar. Amen.
+\end{versicles}
+
+\end{document}

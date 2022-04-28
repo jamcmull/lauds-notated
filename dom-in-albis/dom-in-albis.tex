@@ -1,0 +1,79 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds on Low Sunday\\24 April 2022}
+
+\textit{The antiphons at the psalms are doubled today.}
+
+\section*{Little Chapter (1 John 5:4)}
+
+Caríssimi: Omne, quod natum est ex Deo, vincit mundum:~\GreDagger\
+et hæc est victória, quæ vincit mundum,~*
+fides nostra.
+\Rbar.~Deo grátias.
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Præsta, qu\'{\ae}sumus, omnípotens Deus:~\GreDagger\
+ut qui paschália festa perégimus,~*
+hæc, te largiénte, móribus et vita teneámus.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{St. Fidelis of Sigmaringen, Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/martyr-paschaltide}
+
+\begin{versicles}
+\Vbar. Pretiósa in conspéctu Dómini, allelúia.
+
+\Rbar. Mors Sanctórum eius, allelúia.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Fidélem, seráphico spíritus ardóre succénsum, in veræ fídei propagatióne martýrii palma et gloriósis miráculis decoráre dignátus es:~\GreDagger\
+eius, qu\'{\ae}sumus, méritis et intercessióne, ita nos per grátiam tuam in fide et caritáte confírma;~*
+ut in servítio tuo fidéles usque ad mortem inveníri mereámur.
+Per Dóminum.
+
+\textit{The commemoration of the Cross is not said today.}
+
+\end{document}
