@@ -1,0 +1,48 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\subsection*{Commemoration of the Second Sunday after Easter}
+
+\gresetinitiallines{1}
+\gregorioscore{dom-2-post-pasch}
+
+\begin{versicles}
+\Vbar. In resurrectióne tua, Christe, allelúja.
+
+\Rbar. Cæli et terra læténtur, allelúja.
+\end{versicles}
+
+Orémus.
+Deus, qui in Fílii tui humilitáte jacéntem mundum erexísti:~\GreDagger\
+fidélibus tuis perpétuam concéde lætítiam;~*
+ut, quos perpétuæ mortis eripuísti cásibus, gáudiis fácias pérfrui sempitérnis.
+Per eúmdem Dóminum.
+
+\Rbar.~Amen.
+
+\end{document}
