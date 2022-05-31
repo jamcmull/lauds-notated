@@ -1,0 +1,95 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds on the Third Sunday after Easter\\8 May 2022}
+
+\section*{Little Chapter (1 Peter 2:11)}
+
+Caríssimi: Obsecro vos tamquam ádvenas et peregrínos,~\GreDagger\
+abstinére vos a carnálibus desidériis,~*
+quæ mílitant advérsus ánimam.
+\Rbar.~Deo grátias.
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-6}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Deus, qui errántibus, ut in viam possint redíre justítiæ, veritátis tuæ lumen osténdis:~\GreDagger\
+da cunctis, qui christiána professióne censéntur, et illa respúere, quæ huic inimíca sunt nómini;~*
+et ea, quæ sunt apta, sectári.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{Commemorations}
+
+\subsection*{Apparition of St. Michael, Archangel}
+
+\gresetinitiallines{1}
+\gregorioscore{comm-st-michael}
+
+\begin{versicles}
+\Vbar. Stetit Angelus juxta aram templi, allelúja.
+
+\Rbar. Habens thuríbulum áureum in manu sua, allelúja.
+\end{versicles}
+
+Orémus.
+Deus, qui, miro órdine, Angelórum ministéria hominúmque dispénsas:~\GreDagger\
+concéde propítius; ut, a quibus tibi ministrántibus in cælo semper assístitur,~*
+ab his in terra vita nostra muniátur.
+
+\subsection*{Octave of St. Joseph, Spouse of the Blessed Vergin Mary}
+
+\gresetinitiallines{1}
+\gregorioscore{comm-st-joseph}
+
+\begin{versicles}
+\Vbar. Dedísti mihi protectiónem salútis tuæ, allelúja.
+
+\Rbar. Et déxtera tua suscépit me, allelúja.
+\end{versicles}
+
+Orémus.
+Deus, qui ineffábili providéntia beátum Joseph sanctíssimæ Genitrícis tuæ sponsum elígere dignátus es:~\GreDagger\
+præsta, qu\'{\ae}sumus; ut quem protectórem venerámur in terris,~*
+intercessórem habére mereámur in cælis.
+Qui vivis et regnas cum Deo Patre.
+
+\textit{The commemoration of the Cross is not said today.}
+
+\end{document}

@@ -1,0 +1,60 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds on the Fifth Sunday after Easter\\22 May 2022}
+
+\section*{Little Chapter (James 1:22-24)}
+
+Caríssimi: Estóte factóres verbi, et non auditóres tantum: falléntes vosmetípsos.~\GreDagger\
+Quia si quis audítor est verbi, et non factor, hic comparábitur viro consideránti vultum nativitátis suæ in spéculo:~*
+considerávit enim se, et ábiit, et statim oblítus est qualis fúerit.
+\Rbar.~Deo grátias.
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-2}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Deus, a quo bona cuncta procédunt, largíre supplícibus tuis:~\GreDagger\
+ut cogitémus, te inspiránte, quæ recta sunt;~*
+et, te gubernánte, éadem faciámus.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\textit{The commemoration of the Cross is then said.}
+
+\end{document}

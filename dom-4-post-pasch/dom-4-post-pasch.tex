@@ -1,0 +1,79 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds on the Fourth Sunday after Easter\\15 May 2022}
+
+\section*{Little Chapter (James 1:17)}
+
+Caríssimi: Omne datum óptimum, et omne donum perféctum desúrsum est, descéndens a Patre lúminum,~\GreDagger\
+apud quem non est transmutátio,~*
+nec vicissitúdinis obumbrátio.
+\Rbar.~Deo grátias.
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Deus, qui fidélium mentes uníus éfficis voluntátis:~\GreDagger\
+da pópulis tuis id amáre quod pr\'{\ae}cipis, id desideráre quod promíttis;~*
+ut inter mundánas varietátes ibi nostra fixa sint corda, ubi vera sunt gáudia.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{Commemorations}
+
+\subsection*{St. Jean-Baptiste de La Salle, Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-non-pont-tp}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas, allelúja.
+
+\Rbar. Et osténdit illi regnum Dei, allelúja.
+\end{versicles}
+
+Orémus.
+Deus, qui, ad christiánam páuperum eruditiónem et ad juvéntam in via veritátis firmándam, sanctum Joánnem Baptístam Confessórem excitásti, et novam per eum in Ecclésia famíliam collegísti:~\GreDagger\
+concéde propítius; ut ejus intercessióne et exémplo, stúdio glóriæ tuæ in animárum salúte fervéntes,~*
+ejus in cælis corónæ partícipes fíeri valeámus.
+Per Dóminum.
+
+\textit{The commemoration of the Cross is then said.}
+
+\end{document}

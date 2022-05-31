@@ -1,0 +1,47 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\subsection*{Commemoration of St. Mary Magdalen Pazzi, Virgin}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/one-virgin-paschaltide}
+
+\begin{versicles}
+\Vbar. Diffúsa est grátia in lábiis tuis, allelúja.
+
+\Rbar. Proptérea benedíxit te Deus in ætérnum, allelúja.
+\end{versicles}
+
+Orémus.
+Deus, virginitátis amátor, qui beátam Maríam Magdalénam Vírginem, tuo amóre succénsam, cæléstibus donis decorásti:~\GreDagger\
+da; ut, quam festíva celebritáte venerámur,~*
+puritáte et caritáte imitémur.
+
+\textit{The commemoration of the Octave of the Ascension then follows.}
+
+\end{document}

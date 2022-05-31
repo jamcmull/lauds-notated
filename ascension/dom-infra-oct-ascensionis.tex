@@ -1,0 +1,174 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Lauds on the Sunday within the Octave of the Ascension}
+
+\textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium}
+
+\section*{Psalm 92}
+
+\gresetinitiallines{1}
+\gregorioscore{ps92}
+
+\input{../psalms/92-7}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-1}
+
+\section*{Psalm 99}
+
+\gresetinitiallines{1}
+\gregorioscore{ps99}
+
+\input{../psalms/99-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-2}
+
+\section*{Psalms 62 \& 66}
+
+\gresetinitiallines{1}
+\gregorioscore{ps62}
+
+\input{../psalms/62-4A}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-3}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{benedicite}
+
+\input{../psalms/benedicite-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-4}
+
+\section*{Psalms 148, 149, \& 150}
+
+\gresetinitiallines{1}
+\gregorioscore{ps148}
+
+\input{../psalms/148-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-5}
+
+\pagebreak
+
+\section*{Little Chapter (1 Peter 4:7-8)}
+
+\textit{All stand.}
+
+Caríssimi: Estóte prudéntes, et vigiláte in oratiónibus.~\GreDagger\
+Ante ómnia autem mútuam in vobismetípsis caritátem contínuam habéntes,~*
+quia cáritas óperit multitúdinem peccatórum.
+\Rbar.~Deo grátias.
+
+\section*{Hymn}
+
+\gresetinitiallines{1}
+\gregorioscore{../hymni/hymn-jesu-nostra-redemptio}
+
+\begin{versicles}
+\Vbar. Dóminus in cælo, allelúja.
+
+\Rbar. Parávit sedem suam, allelúja.
+\end{versicles}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+\begin{versicles}
+\Vbar. Dómine exáudi oratiónem meam.
+
+\Rbar. Et clamor meus ad te véniat.
+\end{versicles}
+
+Orémus.
+Omnípotens sempitérne Deus:~\GreDagger\
+fac nos tibi semper et devótam gérere voluntátem,~*
+et majestáti tuæ sincéro corde servíre. 
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\textit{Commemorations of any occuring feasts are then made, followed by that of the Octave of the Ascension:}
+
+\gresetinitiallines{1}
+\gregorioscore{commemoratio-octavae}
+
+\begin{versicles}
+\Vbar. Ascéndit Deus in jubilatióne, allelúja.
+
+\Rbar. Et Dóminus in voce tubæ, allelúja.
+\end{versicles}
+
+Orémus.
+Concéde, qu\'{\ae}sumus, omnípotens Deus:~\GreDagger\
+ut, qui hodiérna die Unigénitum tuum, Redemptórem nostrum, ad cælos ascendísse crédimus,~*
+ipsi quoque mente in cæléstibus habitémus.
+Per eúmdem Dóminum.
+
+\Rbar.~Amen.
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus/benedicamus-paschaltide}
+
+\textit{In a low voice:}
+
+\begin{versicles}
+\Vbar.~Fidelium ánimæ, per misericórdiam Dei, requiéscant in pace.
+
+\Rbar.~Amen.
+\end{versicles}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\begin{versicles}
+\Vbar. Dóminus det nobis suam pacem.
+
+\Rbar. Et vitam ætérnam. Amen.
+\end{versicles}
+
+\textit{The Marian anthem \textnormal{Regina Cæli} follows.}
+
+\end{document}
