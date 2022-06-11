@@ -1,0 +1,172 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds on Trinity Sunday}
+
+\textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium}
+
+\section*{Psalm 92}
+
+\gresetinitiallines{1}
+\gregorioscore{ps92}
+
+\input{../psalms/92-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-1}
+
+\section*{Psalm 99}
+
+\gresetinitiallines{1}
+\gregorioscore{ps99}
+
+\input{../psalms/99-2}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-2}
+
+\section*{Psalms 62 \& 66}
+
+\gresetinitiallines{1}
+\gregorioscore{ps62}
+
+\input{../psalms/62-3}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-3}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{benedicite}
+
+\input{../psalms/benedicite-4E}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-4}
+
+\section*{Psalms 148, 149, \& 150}
+
+\gresetinitiallines{1}
+\gregorioscore{ps148}
+
+\input{../psalms/148-5}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-5}
+
+\section*{Little Chapter (Rom 11:33)}
+
+\textit{All stand.}
+
+O Altitúdo divitiárum sapiéntiæ, et sciéntiæ Dei:~\GreDagger\
+quam incomprehensibília sunt judícia ejus,~*
+et investigábiles viæ ejus!
+\Rbar.~Deo grátias.
+
+\section*{Hymn}
+
+\gresetinitiallines{1}
+\gregorioscore{hymn-tu-trinitatis-unitas}
+
+\begin{versicles}
+\Vbar. Benedicámus Patrem et Fílium cum Sancto Spíritu.
+
+\Rbar. Laudémus et superexaltémus eum in s\'{\ae}cula.
+\end{versicles}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-6}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+\begin{versicles}
+\Vbar. Dómine exáudi oratiónem meam.
+
+\Rbar. Et clamor meus ad te véniat.
+\end{versicles}
+
+Orémus.
+Omnípotens sempitérne Deus, qui dedísti fámulis tuis in confessióne veræ fídei, ætérnæ Trinitátis glóriam agnóscere, et in poténtia majestátis adoráre Unitátem:~\GreDagger\
+qu\'{\ae}sumus; ut, ejúsdem fídei firmitáte,~*
+ab ómnibus semper muniámur advérsis.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\section*{Commemoration of the First Sunday after Pentecost}
+
+\gresetinitiallines{1}
+\gregorioscore{ana-dom-i-post-pent}
+
+\begin{versicles}
+\Vbar. Dóminus regnávit, decórem índuit.
+
+\Rbar. Induit Dóminus fortitúdinem, et præcínxit se virtúte.
+\end{versicles}
+
+Orémus.
+Deus, in te sperántium fortitúdo, adésto propítius invocatiónibus nostris:~\GreDagger\
+et, quia sine te nihil potest mortális infírmitas, præsta auxílium grátiæ tuæ;~*
+ut, in exsequéndis mandátis tuis, et voluntáte tibi et actióne placeámus.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus/benedicamus-solemnity}
+
+\textit{In a low voice:}
+
+\begin{versicles}
+\Vbar.~Fidelium ánimæ, per misericórdiam Dei, requiéscant in pace.
+
+\Rbar.~Amen.
+\end{versicles}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\begin{versicles}
+\Vbar. Dóminus det nobis suam pacem.
+
+\Rbar. Et vitam ætérnam. Amen.
+\end{versicles}
+
+\textit{The Marian anthem \textnormal{Salve Regina} follows.}
+
+\end{document}
