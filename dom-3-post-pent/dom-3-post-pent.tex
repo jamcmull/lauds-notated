@@ -1,0 +1,86 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 3rd Sunday after Pentecost\\26 June 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-3}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Protéctor in te sperántium, Deus, sine quo nihil est válidum, nihil sanctum:~\GreDagger\
+multíplica super nos misericórdiam tuam; ut, te rectóre, te duce, sic transeámus per bona temporália,~*
+ut non amittá\textit{mus æ}\textbf{tér}na.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{Ss. John and Paul, Martyrs}
+
+\gresetinitiallines{1}
+\gregorioscore{../sancti/ss-john-and-paul/ana-ad-benedictus}
+
+\begin{versicles}
+\Vbar. Exsultábunt Sancti in glória.
+
+\Rbar. Lætabúntur in cubílibus suis.
+\end{versicles}
+
+Orémus.
+Qu\'{\ae}sumus, omnípotens Deus: ut nos gemináta lætítia hodiérnæ festivitátis excípiat,~\GreDagger\
+quæ de beatórum Joánnis et Pauli glorificatióne procédit;~*
+quos éadem fides et pássio vere fecit es\textit{se ger}\textbf{má}nos.
+
+\subsection*{Octave of St John the Baptist}
+
+\gresetinitiallines{1}
+\gregorioscore{../sancti/st-john-nativity/ana-ad-benedictus}
+
+\begin{versicles}
+\Vbar. Iste puer magnus coram Dómino.
+
+\Rbar. Nam et manus ejus cum ipso est.
+\end{versicles}
+
+Orémus.
+Deus, qui præséntem diem honorábilem nobis in beáti Joánnis nativitáte fecísti:~\GreDagger\
+da pópulis tuis spirituálium grátiam gaudiórum:~*
+et ómnium fidélium mentes dírige in viam salú\textit{tis æ}\textbf{tér}næ.
+Per Dóminum.
+
+\textit{The suffrages are omitted due to the octave.}
+
+\end{document}

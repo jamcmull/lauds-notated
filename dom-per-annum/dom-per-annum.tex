@@ -1,0 +1,169 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds on Sunday Throughout the Year}
+
+\textit{All make the sign of the cross with the officiant as he begins:}
+
+\gresetinitiallines{1}
+\gregorioscore{../deus-in-adjutorium/deus-in-adjutorium}
+
+\section*{Psalm 92}
+
+\gresetinitiallines{1}
+\gregorioscore{ps92}
+
+\input{../psalms/92-6}
+
+\section*{Psalm 99}
+
+\gresetinitiallines{0}
+\gregorioscore{ps99}
+
+\input{../psalms/99-6}
+
+\section*{Psalms 62 \& 66}
+
+\textit{These two psalms are sung under a single \textnormal{Gloria}.}
+
+\gresetinitiallines{0}
+\gregorioscore{ps62}
+
+\input{../psalms/62-6}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-1}
+
+\section*{The Canticle of the Three Children}
+
+\gresetinitiallines{1}
+\gregorioscore{benedicite}
+
+\input{../psalms/benedicite-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-2}
+
+\section*{Psalms 148, 149, \& 150}
+
+\textit{These three psalms are sung under a single \textnormal{Gloria}.}
+
+\gresetinitiallines{1}
+\gregorioscore{ps148}
+
+\input{../psalms/148-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-3}
+
+\section*{Little Chapter (Apoc. 7:12)}
+
+\textit{All stand.}
+
+\gresetinitiallines{1}
+\gabcsnippet{
+(c3) B<sc>e(h)ne(h)díc(h)ti(h)o,(h)</sc> et(h) clá(h)ri(h)tas,(h) et(h) sa(h)pi(h)én(h)ti(h)a,(h) et(h) gra(h)ti(h)á(h)rum(h) ác(h)ti(f)o,(f) (;)
+ho(h)nor,(h) vir(h)tus,(h) et(h) for(h)ti(h)tú(h)do(h) De(g)o(f) nos(h)tro(h) (;)
+in(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(h)cu(h)ló(h)rum.(h) A(f)men.(ef..) (::)
+<sp>R/</sp>. De(h)o(h) grá(f)ti(e)as.(ef..) (::)
+}
+
+\section*{Hymn}
+
+\textit{From the Octave of Pentecost until the First Sunday of October:}
+
+\gresetinitiallines{1}
+\gregorioscore{hymn-ecce-jam-noctis}
+
+\textit{From the First Sunday of October until Advent, and from Epiphany until Lent:}
+
+\gresetinitiallines{1}
+\gregorioscore{hymn-aeterne-rerum-conditor}
+
+\section*{Verse}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+(c3) <sp>V/</sp>. Dó(h)mi(h)nus(h) reg(h)ná(h)vit,(h) de(h)có(h)rem(h) ín(h)du(h)it.(g'_/hvGF'E/fgf.) (::)
+}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+(c3) <sp>R/</sp>. In(h)du(h)it(h) Dó(h)mi(h)nus(h) for(h)ti(h)tú(h)di(h)nem,(h) et(h) præ(h)cín(h)xit(h) se(h) vir(h)tú(h)te.(g'_/hvGF'E/fgf.) (::)
+}
+
+\section*{Benedictus}
+
+\textit{The antiphon and tone of the Benedictus are proper to the Sunday.}
+
+\section*{Oration}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) <sp>V/</sp>. Dó(g)mi(h)ne(h) e(h)xáu(h)di(g) o(g)ra(g)ti(g)ó(g)nem(h) me(hg)am.(g.) (::)
+	<sp>R/</sp>. Et(g) cla(h)mor(h) me(h)us(g) ad(g) te(g) vé(h)ni(h)at.(h.) (::) O(h)ré(gh)mus.(h.) (:)
+}
+
+\textit{The oration is proper to the Sunday.}
+
+Per Dóminum nostrum Jesum Christum fílium tuum,~\GreDagger\
+qui tecum vivit et regnat in unitáte Spíritus \textit{Sancti} \textbf{De}us,
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) Per(g) óm(h)ni(h)a(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(g)cu(h)ló(hg)rum.(g.) <sp>R/</sp>.(::) A(g.)men.(h.) (::)
+}
+
+\section*{Commemorations and Suffrages}
+
+\textit{Each occuring feast is commemorated, followed by the suffrages except within octaves. Each commemoration or suffrage has an antiphon, versicle and response, and prayer. The conclusion of the prayer is omitted for all but the last.}
+
+\input{../suffragia/suffrages}
+
+\gresetinitiallines{1}
+\gregorioscore{../benedicamus/benedicamus-sunday}
+
+\textit{In a low voice:}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) <sp>V/</sp>. Fi(e)dé(e)li(e)um(e) á(e)ni(e)mæ,(e) per(e) mi(e)se(e)ri(e)cór(e)di(e)am(e) De(e)i,(e) re(e)qui(e)és(e)cant(e) in(e) pa(e)ce.(e.)
+	<sp>R/</sp>.(::) A(e.)men.(e.) (::)
+}
+
+\textit{All say one \textnormal{Pater noster} silently.}
+
+\gresetinitiallines{0}
+\gabcsnippet{
+	(c4) <sp>V/</sp>. Dó(e)mi(e)nus(e) det(e) no(e)bis(e) su(e)am(e) pa(e)cem.(e.)
+	<sp>R/</sp>.(::) Et(e) vi(e)tam(e) æ(e)tér(e)nam.(e) A(e)men.(e.) (::)
+}
+
+\textit{The Marian anthem appropriate to the season follows.}
+
+\end{document}
