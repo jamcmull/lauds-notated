@@ -1,0 +1,65 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
+
+\begin{document}
+
+\chapter*{Sunday within the Octave of Corpus Christ\\19 June 2022}
+
+\textit{Omit the conclusion \textnormal{Qui vivis et regnas} from the commemoration of the Octave.}
+
+\subsection*{Commemoration of St. Juliana Falconieri, Virgin}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/one-virgin}
+
+\begin{versicles}
+\Vbar. Diffúsa est grátia in lábiis tuis.
+
+\Rbar. Proptérea benedíxit te Deus in ætérnum.
+\end{versicles}
+
+Orémus.
+Deus, qui beátam Juliánam Vírginem tuam extrémo morbo laborántem, pretióso Fílii tui Córpore mirabíliter recreáre dignátus es:~\GreDagger\
+concéde, qu\'{\ae}sumus; ut, ejus intercedéntibus méritis, nos quoque eódem in mortis agóne refécti ac roboráti,~*
+ad cæléstem pátriam perducámur.
+
+\subsection*{Commemoration of Ss. Saints Gervase and Protase, Martyrs}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/many-martyrs}
+
+\begin{versicles}
+\Vbar. Exsultábunt Sancti in gloria.
+
+\Rbar. Lætabúntur in cubílibus suis.
+\end{versicles}
+
+Orémus.
+Deus, qui nos ánnua sanctórum Mártyrum tuórum Gervásii et Protásii solemnitáte lætíficas:~*
+concéde propítius; ut, quorum gaudémus méritis, accendámur exémplis.
+Per Dóminum
+
+\end{document}
