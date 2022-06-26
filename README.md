@@ -7,7 +7,7 @@ Precedence has been given to Sundays over many double rank feasts.
 
 Most of the work has been done for Sundays and feasts that fell on Sundays since this project was started.
 
-Most of the music notation comes from the Antiphonale Romanum 1910 and Liber Antiphonarius 1960.
+Most of the music notation comes from the Antiphonale Romanum 1912 and Liber Antiphonarius 1960.
 The Antiphonale Monasticum 1934 and Antiphonale Monasticum 2005 are frequently used.
 
 Hymns are antecendent to the reforms of Urban VIII. Sometimes the monastic melody is used instead of the Roman.
