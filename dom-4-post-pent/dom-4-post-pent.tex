@@ -1,0 +1,86 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 4th Sunday after Pentecost\\3 July 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Da nobis, qu\'{\ae}sumus Dómine,~\GreDagger\
+ut et mundi cursus pacífice nobis tuo órdine dirigátur:~*
+et Ecclésia tua tranquílla devotió\textit{ne læ}\textbf{té}tur.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{St. Leo II, Pope and Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Deus, qui beatum Leonem Pontificem sanctorum tuorum meritis coæquasti:~\GreDagger\
+concede propitius; ut, qui commemorationis ejus festa percolimus,~*
+vitæ quoque imite\textit{mur ex}\textbf{ém}pla.
+
+\subsection*{Octave of the Holy Apostles Peter and Paul}
+
+\gresetinitiallines{1}
+\gregorioscore{../suffragia/gloriosi-principes-terrae}
+
+\begin{versicles}
+\Vbar. In omnem terram exívit sonus eórum.
+
+\Rbar. Et in fines orbis terræ verba eórum.
+\end{versicles}
+
+Orémus.
+Deus, qui hodiérnam diem Apostolórum tuórum Petri et Pauli martýrio consecrásti:~\GreDagger\
+da Ecclésiæ tuæ, eórum in ómnibus sequi præcéptum,~*
+per quos religiónis sum\textit{psit ex}\textbf{ór}dium.
+Per Dóminum.
+
+\textit{The suffrages are omitted due to the octave.}
+
+\end{document}
