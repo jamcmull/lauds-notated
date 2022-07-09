@@ -1,0 +1,69 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{mdframed}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 5th Sunday after Pentecost\\10 July 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Deus, qui diligéntibus te bona invisibília præparásti:~\GreDagger\
+infúnde córdibus nostris tui amóris afféctum; ut te in ómnibus et super ómnia diligéntes,~*
+promissiónes tuas, quæ omne desidérium súperant, \textit{conse}\textbf{quá}mur.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{The Seven Holy Brothers, Martyrs, and Ss. Rufina and Secunda, Virgins and Martyrs}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/plur-mart}
+
+\begin{versicles}
+\Vbar. Exsultábunt Sancti in glória.
+
+\Rbar. Lætabúntur in cubílibus suis.
+\end{versicles}
+
+Orémus.
+Præsta, qu\'{\ae}sumus, omnípotens Deus:~\GreDagger\
+ut, qui gloriósos Mártyres fortes in sua confessióne cognóvimus,~*
+pios apud te in nostra intercessióne \textit{senti}\textbf{á}mus.
+
+\textit{The suffrages are then said.}
+
+\end{document}
