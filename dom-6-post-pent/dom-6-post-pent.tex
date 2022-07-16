@@ -1,3 +1,6 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
 \documentclass[11pt, twoside]{report}
 
 \usepackage{fontspec}
@@ -6,10 +9,7 @@
 \usepackage{bbding}
 \usepackage{ragged2e}
 \usepackage{parskip}
-\usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{paracol}
-\usepackage{mdframed}
 \usepackage[margin=1in]{geometry}
 
 \usepackage[autocompile]{gregoriotex}
@@ -17,323 +17,48 @@
 \titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
 \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
 
-\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
-
-\newcommand{\rubric}[1]{
-	\switchcolumn[0] {
-		\itshape
-		#1
-	}
-}
-
-\newcommand{\latinenglish}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape\small
-		#2
-	}
-}
-
-\newcommand{\latinenglishequal}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape
-		#2
-	}
-}
-
-\newenvironment{latinenglishsection}
-	{\columnratio{.7, .3} \begin{paracol}{2}}
-	{\end{paracol}}
-
-\newenvironment{latinenglishequalsection}
-	{\columnratio{.5, .5}\begin{paracol}{2}}
-	{\end{paracol}}
-
-\setlength{\columnseprule}{0.4pt}
-
-\newcommand{\heading}[1]{
-	\begin{leftcolumn}
-		#1
-	\end{leftcolumn}
-}
-
-\newcommand{\spanning}[1]{
-	\switchcolumn*[#1]
-}
-
-\newenvironment{verses}[1]
-	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
-	{\end{enumerate} \end{flushleft}}
-
-\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
-
-\newenvironment{collect}
-{
-	\leavevmode
-	\parindent=1em
-	\parskip=0pt
-	\noindent Orémus.\par
-}{}
-
-\newenvironment{optionbox}
-{
-	\switchcolumn[0]
-	\begin{mdframed}
-%	\begin{minipage}{0.8\linewidth}
-}{
-%	\end{minipage}
-	\end{mdframed}
-}
-
-\newcommand{\optionrule}{
-	\begin{center}
-	\rule{0.5\linewidth}{0.6pt}
-	\end{center}
-}
-
-\newenvironment{optionruled}
-{
-	\optionrule
-}
-{
-	\optionrule
-}
-
-% for use inside the collect environment
-\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
 
 \begin{document}
 
-\chapter*{Lauds of the Sixth Sunday after Pentecost}
-
- \textit{All make the sign of the cross with the officiant as he begins:}
-
-\gresetinitiallines{1}
-\gregorioscore{deus-in-adjutorium}
-
-\section*{Psalm 92}
-
-\gresetinitiallines{1}
-\gregorioscore{ps92}
-
-\section*{Psalm 99}
-
-\gresetinitiallines{1}
-\gregorioscore{ps99}
-
-\section*{Psalms 62 \& 66}
-
-\textit{These two psalms are sung under a single \textnormal{Gloria}.}
-
-\gresetinitiallines{1}
-\gregorioscore{ps62-66}
-
-\section*{The Canticle of the Three Children}
-
-\gresetinitiallines{1}
-\gregorioscore{benedicite}
-
-\section*{Psalms 148, 149, \& 150}
-
-\textit{These three psalms are sung under a single \textnormal{Gloria}.}
-
-\gresetinitiallines{1}
-\gregorioscore{ps148-149-150}
-
-\section*{Little Chapter (Apoc. 7:12)}
-
-\textit{All stand.}
-
-\gresetinitiallines{1}
-\gabcsnippet{
-(c3) BE(h)ne(h)díc(h)ti(h)o,(h) et(h) clá(h)ri(h)tas,(h) et(h) sa(h)pi(h)én(h)ti(h)a,(h) et(h) gra(h)ti(h)á(h)rum(h) ác(h)ti(f)o,(f) (;)
-ho(h)nor,(h) vir(h)tus,(h) et(h) for(h)ti(h)tú(h)do(h) De(g)o(f) nos(h)tro(h) (;)
-in(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(h)cu(h)ló(h)rum.(h) A(f)men.(ef..) (::)
-<sp>R/</sp>. De(h)o(h) grá(f)ti(e)as.(ef..) (::)
-}
-
-\section*{Hymn}
-
-% This hymn is used from Pentecost till the First Sunday of October
-% After Epiphany, and from October till Advent, Aeterne rerum conditor is sung instead
-\gresetinitiallines{1}
-\gregorioscore{hymn-ecce-jam-noctis}
-
-\gresetinitiallines{0}
-\gabcsnippet{
-(c3) <sp>V/</sp>. Dó(h)mi(h)nus(h) reg(h)ná(h)vit,(h) de(h)có(h)rem(h) ín(h)du(h)it.(g'_/hvGF'E/fgf.) (::)
-}
-
-\gresetinitiallines{0}
-\gabcsnippet{
-(c3) <sp>R/</sp>. In(h)du(h)it(h) Dó(h)mi(h)nus(h) for(h)ti(h)tú(h)di(h)nem,(h) et(h) præ(h)cín(h)xit(h) se(h) vir(h)tú(h)te.(g'_/hvGF'E/fgf.) (::)
-}
+\chapter*{Lauds of the 6th Sunday after Pentecost\\17 July 2022}
 
 \section*{Benedictus}
 
 \gresetinitiallines{1}
-\gregorioscore{benedictus-6-post-pent}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
 
 \section*{Oration}
 
-\gresetinitiallines{0}
-\gabcsnippet{
-	(c4) <sp>V/</sp>. Dó(g)mi(h)ne(h) e(h)xáu(h)di(g) o(g)ra(g)ti(g)ó(g)nem(h) me(hg)am.(g.) (::)
-	<sp>R/</sp>. Et(g) cla(h)mor(h) me(h)us(g) ad(g) te(g) vé(h)ni(h)at.(h.) (::) O(h)ré(gh)mus.(h.) (:)
-}
-
+Orémus.
 Deus virtútum, cujus est totum quod est óptimum:~\GreDagger\
-ínsere pectóribus nostris amórem tui nóminis, et præsta in nobis religiónis augméntum;
-ut, quæ sunt bona, nútrias, ac pietátis stúdio, quæ sunt nutrít\textit{a, cus}\textbf{tó}dias.
-Per Dóminum nostrum Jesum Christum fílium tuum,~\GreDagger\
-qui tecum vivit et regnat in unitáte Spíritus \textit{Sancti} \textbf{De}us,
+ínsere pectóribus nostris amórem tui nóminis, et præsta in nobis religiónis augméntum;~*
+ut, quæ sunt bona, nútrias, ac pietátis stúdio, quæ sunt nutrí\textit{ta, cus}\textbf{tó}dias.
+Per Dóminum.
 
-\gresetinitiallines{0}
-\gabcsnippet{
-	(c4) Per(g) óm(h)ni(h)a(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(g)cu(h)ló(hg)rum.(g.) <sp>R/</sp>.(::) A(g.)men.(h.) (::)
-}
+\Rbar.~Amen.
 
-\section*{Commemorations}
-
-\textit{Each commemoration or suffrage has an antiphon, versicle and response, and prayer. The conclusion of the prayer is omitted for all but the last.}
-
-%\section*{Suffrage of the Saints}
-%
-%\textit{This suffrage is sometimes said when no feast of double rank falls on Sunday or the following day.}
-%
-%\gresetinitiallines{1}
-%\gregorioscore{antiphon-suffrage-saints}
-%
-%\begin{versicles}
-%\Vbar. Mirificávit Dóminus Sanctos suos.
-%
-%\Rbar. Et exaudívit eos clamántes ad se.
-%\end{versicles}
-%
-%Orémus.
-%A cunctis nos, qu\'{\ae}sumus Dómine, mentis et córporis defénde perículis:~\GreDagger\
-%et intercedénte beáta et gloriósa semper Vírgine Dei Genitríce María,
-%cum beáto Joseph, beátis Apóstolis tuis Petro et Paulo, atque beáto \textit{N.} et ómnibus Sanctis,
-%salútem nobis tríbue beníg\textit{nus et} \textbf{pa}cem;~**
-%ut destrúctis adversitátibus et erróribus univérsis,~\GreDagger\
-%Ecclésia tua secúra tibi sérviat \textit{liber}\textbf{tá}te.
-%
-%\textit{At \textnormal{N.} is said the name of the titular saint of the church in which the office is celebrated, in the ablative case,
-%for example, \textnormal{beáto Thoma apóstolo}. If the titular saint is an archangel or John the Baptist, it is mentioned before St. Joseph instead.}
-%
-%Per eúndem Dóminum nostrum Jesum Christum fílium tuum,~\GreDagger\
-%qui tecum vivit et regnat in unitáte Spíritus \textit{Sancti} \textbf{De}us,
-
-\gresetinitiallines{0}
-\gabcsnippet{
-	(c4) Per(g) óm(h)ni(h)a(h) s<sp>'ae</sp>(h)cu(h)la(h) sæ(g)cu(h)ló(hg)rum.(g.) <sp>R/</sp>.(::) A(g.)men.(h.) (::)
-	<sp>V/</sp>. Dó(g)mi(h)ne(h) e(h)xáu(h)di(g) o(g)ra(g)ti(g)ó(g)nem(h) me(hg)am.(g.) (::)
-	<sp>R/</sp>. Et(g) cla(h)mor(h) me(h)us(g) ad(g) te(g) vé(h)ni(h)at.(h.) (::)
-}
+\subsection*{St. Alexius, Confessor}
 
 \gresetinitiallines{1}
-\gregorioscore{benedicamus-sunday}
-
-\textit{In a low voice:}
-
-\gresetinitiallines{0}
-\gabcsnippet{
-	(c4) Fi(e)dé(e)li(e)um(e) á(e)ni(e)mæ,(e) per(e) mi(e)se(e)ri(e)cór(e)di(e)am(e) De(e)i,(e) re(e)qui(e)és(e)cant(e) in(e) pa(e)ce.(e.)
-	<sp>R/</sp>.(::) A(e.)men.(e.) (::)
-}
-
-%% TODO: not sure if this in Lauds
-%\textit{The Office concludes with one \textnormal{Pater noster}, said silently.}
-
-%% TODO: translation
-\par\noindent\rule{\textwidth}{0.4pt}
-
-O God, come to my assistance.
-\Rbar.~O Lord, make haste to help me. Glory be to the Father, and to the Son, and to the Holy Spirit,
-as it was in the beginning, is now, and ever shall be, world without end. Amen. Alleluia.
-
-\textit{Ant. 1} Alleluia.
-\textit{Ps. 92} The Lord hath reigned, he is clothed with beauty: the Lord is clothed with strength, and hath girded himself. For he hath established the world which shall not be moved. Thy throne is prepared from of old: thou art from everlasting. The floods have lifted up, O Lord: the floods have lifted up their voice. The floods have lifted up their waves, with the noise of many waters. Wonderful are the surges of the sea: wonderful is the Lord on high. Thy testimonies are become exceedingly credible: holiness becometh thy house, O Lord, unto length of days.  Glory.
-
-\textit{Ps. 99} Sing joyfully to God, all the earth: serve ye the Lord with gladness. Come in before his presence with exceeding great joy. Know ye that the Lord he is God: he made us, and not we ourselves. We are his people and the sheep of his pasture. Go ye into his gates with praise, into his courts with hymns: and give glory to him. Praise ye his name: for the Lord is sweet, his mercy endureth for ever, and his truth to generation and generation.  Glory.
-
-\textit{Ps. 62} O God, my God, to thee do I watch at break of day. For thee my soul hath thirsted; for thee my flesh, O how many ways! In a desert land, and where there is no way, and no water: so in the sanctuary have I come before thee, to see thy power and thy glory. For thy mercy is better than lives: thee my lips shall praise. Thus will I bless thee all my life long: and in thy name I will lift up my hands. Let my soul be filled as with marrow and fatness: and my mouth shall praise thee with joyful lips. If I have remembered thee upon my bed, I will meditate on thee in the morning: because thou hast been my helper. And I will rejoice under the covert of thy wings: my soul hath stuck close to thee: thy right hand hath received me. But they have sought my soul in vain, they shall go into the lower parts of the earth: they shall be delivered into the hands of the sword, they shall be the portions of foxes. But the king shall rejoice in God, all they shall be praised that swear by him: because the mouth is stopped of them that speak wicked things.
-
-\textit{Ps. 66} May God have mercy on us, and bless us: may he cause the light of his countenance to shine upon us, and may he have mercy on us. That we may know thy way upon earth: thy salvation in all nations. Let people confess to thee, O God: let all people give praise to thee. Let the nations be glad and rejoice: for thou judgest the people with justice, and directest the nations upon earth. Let the people, O God, confess to thee: let all the people give praise to thee: the earth hath yielded her fruit. May God, our God bless us, may God bless us: and all the ends of the earth fear him. Glory.
-
-\textit{Ant.} Alleluia, alleluia.
-
-\textit{Ant. 2} Three youths.
-\textit{Cant.} All ye works of the Lord, bless the Lord: praise and exalt him above all for ever. O ye angels of the Lord, bless the Lord: O ye heavens, bless the Lord. O all ye waters that are above the heavens, bless the Lord: O all ye powers of the Lord, bless the Lord. O ye sun and moon, bless the Lord: O ye stars of heaven, bless the Lord. O every shower and dew, bless ye the Lord: O all ye spirits of God, bless the Lord. O ye fire and heat, bless the Lord: O ye cold and heat, bless the Lord. O ye dews and hoar frosts, bless the Lord: O ye frost and cold, bless the Lord. O ye ice and snow, bless the Lord: O ye nights and days, bless the Lord. O ye light and darkness, bless the Lord: O ye lightnings and clouds, bless the Lord.
-
-O let the earth bless the Lord: let it praise and exalt him above all for ever. O ye mountains and hills, bless the Lord: O all ye things that spring up in the earth, bless the Lord. O ye fountains, bless the Lord: O ye seas and rivers, bless the Lord. O ye whales, and all that move in the waters, bless the Lord: O all ye fowls of the air, bless the Lord. O all ye beasts and cattle, bless the Lord: O ye sons of men, bless the Lord. O let Israel bless the Lord: let them praise and exalt him above all for ever. O ye priests of the Lord, bless the Lord: O ye servants of the Lord, bless the Lord. O ye spirits and souls of the just, bless the Lord: O ye holy and humble of heart, bless the Lord. O Ananias, Azarias, and Misael, bless ye the Lord: praise and exalt him above all for ever. Let us bless the Father and the Son with the Holy Spirit: let us praise him and exalt him above all for ever. Blessed art thou, O Lord, in the firmament of heaven: and worthy of praise, and glorious, and exalted above all for ever.
-
-\textit{Ant.} Three youths by order of the king were thrown into a furnace, but they not fearing the falmes of fire said: Blessed be God.
-
-\textit{Ant. 3} Alleluia.
-\textit{Ps. 148} Praise ye the Lord from the heavens: praise ye him in the high places. Praise ye him, all his angels: praise ye him, all his hosts. Praise ye him, O sun and moon: praise him, all ye stars and light. Praise him, ye heavens of heavens: and let all the waters that are above the heavens praise the name of the Lord. For he spoke, and they were made: he commanded, and they were created. He hath established them for ever, and for ages of ages: he hath made a decree, and it shall not pass away. Praise the Lord from the earth, ye dragons, and all ye deeps: fire, hail, snow, ice, stormy winds which fulfill his word: mountains and all hills, fruitful trees and all cedars: beasts and all cattle: serpents and feathered fowls: kings of the earth and all people: princes and all judges of the earth: young men and maidens: let the old with the younger, praise the name of the Lord: for his name alone is exalted. The praise of him is above heaven and earth: and he hath exalted the horn of his people. A hymn to all his saints: to the children of Israel, a people approaching to him.
-
-\textit{Ps. 149} Sing ye to the Lord a new canticle: let his praise be in the church of the saints. Let Israel rejoice in him that made him: and let the children of Sion be joyful in their king. Let them praise his name in choir: let them sing to him with the timbrel and the psaltery. For the Lord is well pleased with his people: and he will exalt the meek unto salvation. The saints shall rejoice in glory: they shall be joyful in their beds. The high praise of God shall be in their mouth: and two-edged swords in their hands: to execute vengeance upon the nations, chastisements among the people: to bind their kings with fetters, and their nobles with manacles of iron. To execute upon them the judgment that is written: this glory is to all his saints.
-
-\textit{Ps. 150} Praise ye the Lord in his holy places: praise ye him in the firmament of his power. Praise ye him for his mighty acts: praise ye him according to the multitude of his greatness. Praise him with sound of trumpet: praise him with psaltery and harp. Praise him with timbrel and choir: praise him with strings and organs. Praise him on high sounding cymbals: praise him on cymbals of joy: let every spirit praise the Lord. Glory.
-
-\textit{Ant.} Alleluia, alleluia, alleluia.
-
-\textit{Little Chapter (Apoc. 7:12)} Benediction, and glory, and wisdom, and thanksgiving, honour, and power, and strength to our God for ever and ever. Amen. \Rbar.~Thanks be to God.
-
-
-\textit{Hymn.} Lo! the dim shadows of the night are waning;
-radiantly glowing, dawn of day returneth;
-fervent in spirit, to the mighty Father
-pray we devoutly.
-2. So shall our Maker, of His great compassion,
-banish all sickness, kindly health bestowing;
-and may He grant us, of a Father's goodness,
-mansions in heaven. 
-3. This He vouchsafe us, God for ever blessed,
-Father eternal, Son, and Holy Spirit,
-Whose is the glory which through all creation
-ever resoundeth. Amen. 
-
+\gregorioscore{../commemorations/conf-non-pont}
 
 \begin{versicles}
-\Vbar.~The Lord is King; he hath clothed Himself in majesty.
+\Vbar. Justum dedúxit Dóminus per vias rectas.
 
-\Rbar.~The Lord hath clothed and girded Himself with power.
+\Rbar. Et osténdit illi regnum Dei.
 \end{versicles}
 
-\textit{Ant. Ben.} When there was a great crowd. \textit{Cant.} Blessed be the Lord God of Israel; because he hath visited and wrought the redemption of his people: and hath raised up an horn of salvation to us, in the house of David his servant: as he spoke by the mouth of his holy prophets, who are from the beginning: salvation from our enemies, and from the hand of all that hate us: to perform mercy to our fathers, and to remember his holy testament, the oath, which he swore to Abraham our father, that he would grant to us, that being delivered from the hand of our enemies, we may serve him without fear, in holiness and justice before him, all our days.
+Orémus.
+Deus, qui nos beáti Aléxii Confessóris tui ánnua solemnitáte lætíficas:~\GreDagger\
+concéde propítius; ut cujus natalícia cólimus,~*
+étiam actiónes \textit{imi}\textbf{té}mur.
 
-And thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare his ways: to give knowledge of salvation to his people, unto the remission of their sins: through the bowels of the mercy of our God, in which the Orient from on high hath visited us: to enlighten them that sit in darkness, and in the shadow of death: to direct our feet into the way of peace. Glory.
-
-\textit{Ant.} When there was a great crowd with Jesus, and they had nothing to eat, He called His disciples together and said to them: I have compassion on the crowd, for behold, they have now been with Me three days, and have nothing to eat, alleluia.
-
-O Lord, hear my prayer. \Rbar.~And let my cry come unto Thee.
-
-Let us pray.
-O God of the heavenly powers, creator of all good things, implant in our hearts the love of Thy Name, and bestow upon us an increase of godliness, fostering what is good, and, by Thy loving care, guarding what Thou hast fostered.Through our Lord. \Rbar.~Amen.
-
-%\textit{(Commemorations)}
-%
-%\textit{Suffr. of the Saints.} May the Blessed Mother of God, the Virgin Mary, and all the Saints, intercede for us before the Lord.
-%
-%The Lord hath made His holy ones wonderful. \Rbar.~And He hath heard them when they cried unto Him.
-%
-%Let us pray. From all perils of soul and body defend us, O Lord, we beseech Thee,
-%and by the intercession of blessed and gloriosus ever Virgin Mary, Mother of God,
-%of blessed Joseph, of thy blessed apostles Peter and Paul, and of blessed \textnormal{N.} and all the Saints,
-%graciously grant us safety and peace that all adversities and errors being overcome,
-%thy Church may serve Thee in security and freedom. Through the same. \Rbar.~Amen.
-%
-O Lord, hear my prayer. \Rbar.~And let my cry come unto Thee.
-
-Let us bless the Lord. \Rbar.~Thanks be to God.
-
-May the souls of the faithful departed, through the mercy of God, rest in peace. \Rbar.~Amen.
+\textit{The suffrages are then said.}
 
 \end{document}
