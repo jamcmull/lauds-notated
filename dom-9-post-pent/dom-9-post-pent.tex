@@ -1,0 +1,79 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 9th Sunday after Pentecost\\7 August 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Páteant aures misericórdiæ tuæ, Dómine, précibus supplicántium:~\GreDagger\
+et, ut peténtibus desideráta concédas,~*
+fac eos quæ tibi sunt plácita \textit{postu}\textbf{lá}re.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{St. Cajetan, Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../sancti/st-cajetan/ana-ad-benedictus}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Deus, qui beáto Cajetáno Confessóri tuo apostólicam vivéndi formam imitári tribuísti:~\GreDagger\
+da nobis, ejus intercessióne et exémplo in te semper confídere,~*
+et sola cæléstia de\textit{sider}\textbf{ár}e.
+
+\subsection*{St. Donatus, Bishop and Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/unius-martyris}
+
+\begin{versicles}
+\Vbar. Justus ut palma florébit.
+
+\Rbar. Sicut cedrus Líbani multiplicábitur.
+\end{versicles}
+
+Orémus.
+Deus, tuórum glória sacerdótum:~\GreDagger\
+præsta, qu\'{\ae}sumus, ut sancti Martyris tui et Epíscopi Donáti, cujus festa gérimus, sentiá\textit{mus aux}\textbf{í}lium.
+
+\textit{The suffrages are then said.}
+
+\end{document}
