@@ -1,0 +1,96 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 12th Sunday after Pentecost\\28 August 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Omnípotens et miséricors Deus, de cujus múnere venit, ut tibi a fidélibus tuis digne et laudabíliter serviátur:~\GreDagger\
+tríbue, qu\'{\ae}sumus, nobis;~*
+ut ad promissiónes tuas sine offensió\textit{ne cur}\textbf{rá}mus.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{St. Augustine, Bishop, Confessor and Doctor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Adésto supplicatiónibus nostris, omnípotens Deus:~\GreDagger\
+et, quibus fidúciam sperándæ pietátis indúlges, intercedénte beáto Augustíno Confessóre tuo atque Pontífice,~*
+consuétæ misericórdiæ tríbue bení\textit{gnus ef}\textbf{féc}tum.
+
+\subsection*{Octave of St. Louis, King}
+
+\gresetinitiallines{1}
+\gregorioscore{../sancti/st-louis/ana-ad-benedictus}
+
+\begin{versicles}
+\Vbar. Amávit eum Dóminus, et ornávit eum.
+
+\Rbar. Stolam glóriæ índuit eum.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Ludovícum, Confessórem tuum, de terréno regno ad cæléstis regni glóriam transtulísti:~\GreDagger\
+ejus qu\'{\ae}sumus, méritis et intercessióne,~*
+Regis regum Jesu Christi, Fílii tui, fácias nos es\textit{se con}\textbf{sór}tes.
+
+\subsection*{St. Hermes, Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/unius-martyris}
+
+\begin{versicles}
+\Vbar. Justus ut palma florébit.
+
+\Rbar. Sicut cedrus Líbani multiplicábitur.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Hermétem Mártyrem tuum virtúte constántiæ in passióne roborásti:~\GreDagger\
+ex ejus nobis imitatióne tríbue; pro amóre tuo próspera mundi despícere, et nulla ejus advérsa \textit{formi}\textbf{dá}re.
+Per Dóminum.
+
+\textit{The suffrages are omitted due to the octave.}
+
+\end{document}
