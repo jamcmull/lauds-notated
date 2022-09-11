@@ -1,0 +1,80 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 14th Sunday after Pentecost\\11 September 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-8}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Orémus.
+Custódi, Dómine, qu\'{\ae}sumus, Ecclésiam tuam propitiatióne perpétua:~\GreDagger\
+et, quia sine te lábitur humána mortálitas,~*
+tuis semper auxíliis et abstrahátur a nóxiis, et ad salutária \textit{diri}\textbf{gá}tur.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{Octave of the Nativity of Our Lady}
+
+\gresetinitiallines{1}
+\gregorioscore{../sancti/nativity-bvm/ana-ad-benedictus}
+
+\begin{versicles}
+\Vbar. Natívitas est hódie sanctæ Maríæ Vírginis.
+
+\Rbar. Cujus vita ínclita cunctas illústrat ecclésias.
+\end{versicles}
+
+Orémus.
+Fámulis tuis, qu\'{\ae}sumus, Dómine, cæléstis grátiæ munus impertíre:~\GreDagger\
+ut, quibus beátæ Vírginis partus éxstitit salútis exórdium,~*
+Nativitátis ejus votíva solémnitas pacis tríbuat \textit{incre}\textbf{mén}tum.
+
+\subsection*{Ss. Protus and Hyacinth, Martyrs}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/plur-mart}
+
+\begin{versicles}
+\Vbar. Exsultábunt Sancti in glória.
+
+\Rbar. Lætabúntur in cubílibus suis.
+\end{versicles}
+
+Orémus.
+Beatórum Mártyrum tuórum Proti et Hyacínthi nos, Dómine, fóveat pretiósa conféssio:~\GreDagger\
+et pia júgiter intercéssio \textit{tue}\textbf{á}tur.
+Per Dóminum.
+
+\textit{The suffrages are omitted due to the octave.}
+
+\end{document}
