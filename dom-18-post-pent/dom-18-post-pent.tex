@@ -1,3 +1,6 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
 \documentclass[11pt, twoside]{report}
 
 \usepackage{fontspec}
@@ -6,10 +9,7 @@
 \usepackage{bbding}
 \usepackage{ragged2e}
 \usepackage{parskip}
-\usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{paracol}
-\usepackage{mdframed}
 \usepackage[margin=1in]{geometry}
 
 \usepackage[autocompile]{gregoriotex}
@@ -17,154 +17,35 @@
 \titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
 \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
 
-\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
-
-\newcommand{\rubric}[1]{
-	\switchcolumn[0] {
-		\itshape
-		#1
-	}
-}
-
-\newcommand{\latinenglish}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape\small
-		#2
-	}
-}
-
-\newcommand{\latinenglishequal}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape
-		#2
-	}
-}
-
-\newenvironment{latinenglishsection}
-	{\columnratio{.7, .3} \begin{paracol}{2}}
-	{\end{paracol}}
-
-\newenvironment{latinenglishequalsection}
-	{\columnratio{.5, .5}\begin{paracol}{2}}
-	{\end{paracol}}
-
-\setlength{\columnseprule}{0.4pt}
-
-\newcommand{\heading}[1]{
-	\begin{leftcolumn}
-		#1
-	\end{leftcolumn}
-}
-
-\newcommand{\spanning}[1]{
-	\switchcolumn*[#1]
-}
-
-\newenvironment{verses}[1]
-	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
-	{\end{enumerate} \end{flushleft}}
-
-\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
-
-\newenvironment{collect}
-{
-	\leavevmode
-	\parindent=1em
-	\parskip=0pt
-	\noindent Orémus.\par
-}{}
-
-\newenvironment{optionbox}
-{
-	\switchcolumn[0]
-	\begin{mdframed}
-%	\begin{minipage}{0.8\linewidth}
-}{
-%	\end{minipage}
-	\end{mdframed}
-}
-
-\newcommand{\optionrule}{
-	\begin{center}
-	\rule{0.5\linewidth}{0.6pt}
-	\end{center}
-}
-
-\newenvironment{optionruled}
-{
-	\optionrule
-}
-{
-	\optionrule
-}
-
-% for use inside the collect environment
-\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
 
 \begin{document}
 
-\chapter*{Lauds of the 18th Sunday after Pentecost\\26 September 2021}
+\chapter*{Lauds of the 18th Sunday after Pentecost\\9 October 2022}
 
 \section*{Benedictus}
 
 \gresetinitiallines{1}
 \gregorioscore{benedictus}
 
-2. Et eréxit cornu sa\textbf{lú}tis \textbf{no}bis:~* in domo David, pú\textit{e}\textit{ri} \textbf{su}i.
-
-3. Sicut locútus est per \textbf{os} sanc\textbf{tó}rum,~* qui a s\'{\ae}culo sunt, prophe\textit{tá}\textit{rum} \textbf{e}jus:
-
-4. Salútem ex ini\textbf{mí}cis \textbf{nos}tris,~* et de manu ómnium, \textit{qui} \textit{o}\textbf{dé}runt nos.
-
-5. Ad faciéndam misericórdiam cum \textbf{pá}tribus \textbf{nos}tris:~* et memorári testaménti \textit{su}\textit{i} \textbf{sanc}ti.
-
-6. Jusjurándum, quod jurávit ad Abraham \textbf{pa}trem \textbf{nos}trum,~* datú\textit{rum} \textit{se} \textbf{no}bis:
-
-7. Ut sine timóre, de manu inimicórum nostrórum \textbf{li}be\textbf{rá}ti,~* servi\textit{á}\textit{mus} \textbf{il}li.
-
-8. In sanctitáte, et justítia \textbf{co}ram \textbf{ip}so,~* ómnibus di\textit{é}\textit{bus} \textbf{nos}tris.
-
-9. Et tu, puer, Prophéta Altíssi\textbf{mi} vo\textbf{cá}beris:~* præíbis enim ante fáciem Dómini, paráre \textit{vi}\textit{as} \textbf{e}jus:
-
-10. Ad dandam sciéntiam salútis \textbf{ple}bi \textbf{e}jus:~* in remissiónem peccató\textit{rum} \textit{e}\textbf{ó}rum:
-
-11. Per víscera misericórdiæ \textbf{De}i \textbf{nos}tri:~* in quibus visitávit nos, óri\textit{ens} \textit{ex} \textbf{al}to:
-
-12. Illumináre his, qui in ténebris, et in umbra \textbf{mor}tis \textbf{se}dent:~* ad dirigéndos pedes nostros in \textit{vi}\textit{am} \textbf{pa}cis.
-
-Glória \textbf{Pa}tri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
-
-Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
-\pagebreak
+\input{../psalms/benedictus-1}
 
 \gresetinitiallines{0}
 \gregorioscore{ana-ben}
 
 \section*{Oration}
 
-\begin{versicles}
-\Vbar. Dómine exáudi oratiónem meam.
-
-\Rbar. Et clamor meus ad te véniat.
-\end{versicles}
-
 Orémus.
-Dírigat corda nostra, qu\'{\ae}sumus, Dómine, tuæ miseratiónis operátio:~*
-quia tibi sine te placére non póssumus.
+Dírigat corda nostra, qu\'{\ae}sumus, Dómine, tuæ miseratiónis operátio:~\GreDagger\
+quia tibi sine te placé\textit{re non} \textbf{pós}sumus.
 Per Dóminum.
 
 \Rbar.~Amen.
 
-\section*{Sts. Cyprian and Justina, Martyrs}
-
+\subsection*{Ss. Denis, Bishop, Rusticus and Eleutherius, Martyrs}
+ 
 \gresetinitiallines{1}
-\gregorioscore{../commemorations/many-martyrs}
+\gregorioscore{../commemorations/plur-mart}
 
 \begin{versicles}
 \Vbar. Exsultábunt Sancti in glória.
@@ -173,11 +54,10 @@ Per Dóminum.
 \end{versicles}
 
 Orémus.
-Beatórum Mártyrum Cypriáni et Justínæ nos, Dómine, fóveant continuáta præsídia:~\GreDagger\
-quia non désinis propítius intuéri,
-quos tálibus auxíliis concésseris adjuvári.
-Per Dóminum.
+Deus, qui hodiérna die beátum Dionýsium, Mártyrem tuum atque Pontíficem, virtúte constántiæ in passióne roborásti, quique illi, ad prædicándum Géntibus glóriam tuam, Rústicum et Eleuthérium sociáre dignátus es:~\GreDagger\
+tríbue nobis, qu\'{\ae}sumus; eórum imitatióne, pro amóre tuo próspera mundi despícere,~*
+et nulla ejus advérsa \textit{formi}\textbf{dá}re.
 
-\textit{The suffrages are said.}
+\textit{The suffrages are then said.}
 
 \end{document}
