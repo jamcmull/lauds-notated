@@ -1,3 +1,6 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
 \documentclass[11pt, twoside]{report}
 
 \usepackage{fontspec}
@@ -6,10 +9,7 @@
 \usepackage{bbding}
 \usepackage{ragged2e}
 \usepackage{parskip}
-\usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{paracol}
-\usepackage{mdframed}
 \usepackage[margin=1in]{geometry}
 
 \usepackage[autocompile]{gregoriotex}
@@ -17,164 +17,47 @@
 \titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
 \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
 
-\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
-
-\newcommand{\rubric}[1]{
-	\switchcolumn[0] {
-		\itshape
-		#1
-	}
-}
-
-\newcommand{\latinenglish}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape\small
-		#2
-	}
-}
-
-\newcommand{\latinenglishequal}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape
-		#2
-	}
-}
-
-\newenvironment{latinenglishsection}
-	{\columnratio{.7, .3} \begin{paracol}{2}}
-	{\end{paracol}}
-
-\newenvironment{latinenglishequalsection}
-	{\columnratio{.5, .5}\begin{paracol}{2}}
-	{\end{paracol}}
-
-\setlength{\columnseprule}{0.4pt}
-
-\newcommand{\heading}[1]{
-	\begin{leftcolumn}
-		#1
-	\end{leftcolumn}
-}
-
-\newcommand{\spanning}[1]{
-	\switchcolumn*[#1]
-}
-
-\newenvironment{verses}[1]
-	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
-	{\end{enumerate} \end{flushleft}}
-
-\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
-
-\newenvironment{collect}
-{
-	\leavevmode
-	\parindent=1em
-	\parskip=0pt
-	\noindent Orémus.\par
-}{}
-
-\newenvironment{optionbox}
-{
-	\switchcolumn[0]
-	\begin{mdframed}
-%	\begin{minipage}{0.8\linewidth}
-}{
-%	\end{minipage}
-	\end{mdframed}
-}
-
-\newcommand{\optionrule}{
-	\begin{center}
-	\rule{0.5\linewidth}{0.6pt}
-	\end{center}
-}
-
-\newenvironment{optionruled}
-{
-	\optionrule
-}
-{
-	\optionrule
-}
-
-% for use inside the collect environment
-\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
 
 \begin{document}
 
-\chapter*{Lauds of the 22nd Sunday after Pentecost\\24 October 2021}
+\chapter*{Lauds of the 22nd Sunday after Pentecost\\6 November 2022}
 
 \section*{Benedictus}
 
 \gresetinitiallines{1}
 \gregorioscore{benedictus}
 
-2. Et eréxit cornu salútis \textbf{no}bis:~* in domo David, pú\textit{e}\textit{ri} \textbf{su}i.
-
-3. Sicut locútus est per os sanc\textbf{tó}rum,~* qui a s\'{\ae}culo sunt, prophe\textit{tá}\textit{rum} \textbf{e}jus:
-
-4. Salútem ex inimícis \textbf{nos}tris,~* et de manu ómnium, \textit{qui} \textit{o}\textbf{dé}runt nos.
-
-5. Ad faciéndam misericórdiam cum pátribus \textbf{nos}tris:~* et memorári testaménti \textit{su}\textit{i} \textbf{sanc}ti.
-
-6. Jusjurándum, quod jurávit ad Abraham patrem \textbf{nos}trum,~* datú\textit{rum} \textit{se} \textbf{no}bis:
-
-7. Ut sine timóre, de manu inimicórum nostrórum libe\textbf{rá}ti,~* servi\textit{á}\textit{mus} \textbf{il}li.
-
-8. In sanctitáte, et justítia coram \textbf{ip}so,~* ómnibus di\textit{é}\textit{bus} \textbf{nos}tris.
-
-9. Et tu, puer, Prophéta Altíssimi vo\textbf{cá}beris:~* præíbis enim ante fáciem Dómini, paráre \textit{vi}\textit{as} \textbf{e}jus:
-
-10. Ad dandam sciéntiam salútis plebi \textbf{e}jus:~* in remissiónem peccató\textit{rum} \textit{e}\textbf{ó}rum:
-
-11. Per víscera misericórdiæ Dei \textbf{nos}tri:~* in quibus visitávit nos, óri\textit{ens} \textit{ex} \textbf{al}to:
-
-12. Illumináre his, qui in ténebris, et in umbra mortis \textbf{se}dent:~* ad dirigéndos pedes nostros in \textit{vi}\textit{am} \textbf{pa}cis.
-
-13. Glória Patri, et \textbf{Fí}lio,~* et Spirí\textit{tu}\textit{i} \textbf{Sanc}to.
-
-14. Sicut erat in princípio, et nunc, et \textbf{sem}per,~* et in s\'{\ae}cula sæcu\textit{ló}\textit{rum}. \textbf{A}men.
-
-
-\pagebreak
+\input{../psalms/benedictus-8}
 
 \gresetinitiallines{0}
 \gregorioscore{ana-ben}
 
 \section*{Oration}
 
-Orémus.
-Deus, refúgium nostrum et virtus:
-adésto piis Ecclésiæ tuæ précibus, auctor ipse pietátis, et præsta;
-ut quod fidéliter pétimus, efficáciter consequámur.
+Deus, refúgium nostrum et virtus:~\GreDagger\
+adésto piis Ecclésiæ tuæ précibus, auctor ipse pietátis, et præsta:~*
+ut, quod fidéliter pétimus, efficáciter \textit{conse}\textbf{quá}mur.
 Per Dóminum.
 
 \Rbar.~Amen.
 
-\section*{St. Raphael, Archangel}
+\subsection*{Octave of All Saints}
 
 \gresetinitiallines{1}
-\gregorioscore{comm-raphael}
+\gregorioscore{../sancti/all-saints/ana-ad-benedictus}
 
 \begin{versicles}
-\Vbar. In conspéctu Angelórum psallam tibi, Deus meus.
+\Vbar. Exsultábunt sancti in glória.
 
-\Rbar. Adorábo ad templum sanctum tuum, et confitébor nómini tuo.
+\Rbar. Lætabúntur in cubílibus suis.
 \end{versicles}
 
 Orémus.
-Deus, qui beátum Raphaélem Archángelum Tobíæ fámulo tuo cómitem dedísti in via:
-concéde nobis fámulis tuis; ut ejúsdem semper protegámur custódia,
-et muniámur auxílio.
+Omnípotens sempitérne Deus, qui nos ómnium Sanctórum tuórum mérita sub una tribuísti celebritáte venerári:~\GreDagger\
+qu\'{\ae}sumus, ut desiderátam nobis tuæ propitiatiónis abundántiam,~*
+multiplicátis intercessóribus, \textit{largi}\textbf{á}ris.
 Per Dóminum.
 
-\textit{The suffrages are omitted.}
-
+\textit{The suffrages are omitted due to the octave.}
 \end{document}
