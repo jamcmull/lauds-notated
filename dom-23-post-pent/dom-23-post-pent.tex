@@ -1,0 +1,62 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 23rd Sunday after Pentecost\\13 November 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Absólve, qu\'{\ae}sumus, Dómine, tuórum delícta populórum:~\GreDagger\
+ut a peccatórum néxibus, quæ pro nostra fragilitáte contráximus,~*
+tua benignitáte \textit{libe}\textbf{ré}mur.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{St. Didacus of Alcalá, Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-non-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Omnípotens sempitérne Deus, qui dispositióne mirábili infírma mundi éligis, ut fórtia quæque confúndas:~\GreDagger\
+concéde propítius humilitáti nostræ; ut piis beáti Dídaci Confessóris tui précibus,~*
+ad perénnem in cælis glóriam sublimári \textit{mere}\textbf{á}mur.
+
+\textit{The suffrages are then said.}
+\end{document}
