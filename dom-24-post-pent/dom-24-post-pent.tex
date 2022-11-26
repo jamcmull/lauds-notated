@@ -1,0 +1,62 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the 24th and Last Sunday after Pentecost\\20 November 2022}
+
+\section*{Benedictus}
+
+\gresetinitiallines{1}
+\gregorioscore{benedictus}
+
+\input{../psalms/benedictus-1D2}
+
+\gresetinitiallines{0}
+\gregorioscore{ana-ben}
+
+\section*{Oration}
+
+Excita, qu\'{\ae}sumus, Dómine, tuórum fidélium voluntátes:~\GreDagger\
+ut divíni óperis fructum propénsius exsequéntes,~*
+pietátis tuæ remédia majó\textit{ra per}\textbf{cí}piant.
+Per Dóminum.
+
+\Rbar.~Amen.
+
+\subsection*{St. Felix of Valois, Confessor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-non-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Felícem Confessórem tuum ex erémo ad munus rediméndi captívos c\'{\ae}litus vocáre dignátus es:~\GreDagger\
+præsta qu\'{\ae}sumus; ut per grátiam tuam ex peccatórum nostrórum captivitáte, ejus intercessióne, liberáti,~*
+ad cæléstem pátriam \textit{perdu}\textbf{cá}mur.
+
+\textit{The suffrages are then said.}
+\end{document}
