@@ -33,7 +33,7 @@ Many of the older booklets will not work right away due to several file restruct
 
 ## Credits
 
-Much thanks are owed to Br Scott Morton, OSB, for typesetting knowledge and Mr Alfred Kalantar for rubrical assistance.
+Much thanks are owed to Mr Scott Morton for typesetting knowledge and Mr Alfred Kalantar for rubrical assistance.
 
 Most antiphons come from [GregoBase](https://gregobase.selapa.net/).
 
