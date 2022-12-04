@@ -1,0 +1,60 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the Second Sunday of Advent\\4 December 2022}
+
+
+\subsection*{St. Peter Chrysologus, Bishop and Doctor}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Deus, qui beátum Petrum Chrysólogum Doctórem egrégium, divínitus præmonstrátum, ad regéndam et instruéndam Ecclésiam tuam éligi voluísti:~\GreDagger\
+præsta, qu\'{\ae}sumus; ut, quem Doctórem vitæ habúimus in terris,~*
+intercessórem habére mereá\textit{mur in} \textbf{cæ}lis.
+
+\subsection*{St. Barbara, Virgin and Martyr}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/virginis}
+
+\begin{versicles}
+\Vbar. Diffúsa est grátia in lábiis tuis.
+
+\Rbar. Proptérea benedíxit te Deus in ætérnum.
+\end{versicles}
+
+Orémus.
+Deus, qui inter cétera poténtiæ tuæ mirácula étiam in sexu frágili victóriam martýrii contulísti:~\GreDagger\
+concéde propítius; ut, qui beátæ Bárbaræ Vírginis et Mártyris tuæ natalícia cólimus, per ejus ad te exémpla \textit{gradi}\textbf{á}mur.
+Per Dóminum.
+
+\textit{The suffrages are omitted during Advent.}
+\end{document}
