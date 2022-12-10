@@ -1,0 +1,63 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{Lauds of the Third Sunday of Advent\\11 December 2022}
+
+
+\subsection*{St. Damasus, Pope}
+
+\gresetinitiallines{1}
+\gregorioscore{../commemorations/conf-pont}
+
+\begin{versicles}
+\Vbar. Justum dedúxit Dóminus per vias rectas.
+
+\Rbar. Et osténdit illi regnum Dei.
+\end{versicles}
+
+Orémus.
+Exáudi, Dómine, preces nostras:~\GreDagger\
+et interveniénte beáto Dámaso Confessóre tuo atque Pontífice,~*
+indulgéntiam nobis tríbue placá\textit{tus et} \textbf{pa}cem.
+
+\subsection*{Octave of the Immaculate Conception}
+
+\gresetinitiallines{1}
+\gregorioscore{../sancti/immaculate-conception/ana-ad-benedictus}
+
+\begin{versicles}
+\Vbar. Immaculáta Concéptio est hódie sanctæ Maríæ Vírginis.
+
+\Rbar. Quæ serpéntis caput virgíneo pede contrívit.
+\end{versicles}
+
+Orémus.
+Deus, qui per immaculátam Vírginis Conceptiónem dignum Fílio tuo habitáculum præparásti:~\GreDagger\
+qu\'{\ae}sumus; ut qui ex morte ejúsdem Fílii tui prævísa, eam ab omni labe præservásti,~*
+nos quoque mundos ejus intercessióne ad te pervení\textit{re con}\textbf{cé}das.
+Per eúmdem.
+
+\Rbar.~Amen.
+
+\textit{The suffrages are omitted during Advent.}
+\end{document}
