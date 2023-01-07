@@ -1,3 +1,6 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
 \documentclass[11pt, twoside]{report}
 
 \usepackage{fontspec}
@@ -6,10 +9,7 @@
 \usepackage{bbding}
 \usepackage{ragged2e}
 \usepackage{parskip}
-\usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{paracol}
-\usepackage{mdframed}
 \usepackage[margin=1in]{geometry}
 
 \usepackage[autocompile]{gregoriotex}
@@ -17,104 +17,16 @@
 \titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
 \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
 
-\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
-
-\newcommand{\rubric}[1]{
-	\switchcolumn[0] {
-		\itshape
-		#1
-	}
-}
-
-\newcommand{\latinenglish}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape\small
-		#2
-	}
-}
-
-\newcommand{\latinenglishequal}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape
-		#2
-	}
-}
-
-\newenvironment{latinenglishsection}
-	{\columnratio{.7, .3} \begin{paracol}{2}}
-	{\end{paracol}}
-
-\newenvironment{latinenglishequalsection}
-	{\columnratio{.5, .5}\begin{paracol}{2}}
-	{\end{paracol}}
-
-\setlength{\columnseprule}{0.4pt}
-
-\newcommand{\heading}[1]{
-	\begin{leftcolumn}
-		#1
-	\end{leftcolumn}
-}
-
-\newcommand{\spanning}[1]{
-	\switchcolumn*[#1]
-}
-
-\newenvironment{verses}[1]
-	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
-	{\end{enumerate} \end{flushleft}}
-
-\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
-
-\newenvironment{collect}
-{
-	\leavevmode
-	\parindent=1em
-	\parskip=0pt
-	\noindent Orémus.\par
-}{}
-
-\newenvironment{optionbox}
-{
-	\switchcolumn[0]
-	\begin{mdframed}
-%	\begin{minipage}{0.8\linewidth}
-}{
-%	\end{minipage}
-	\end{mdframed}
-}
-
-\newcommand{\optionrule}{
-	\begin{center}
-	\rule{0.5\linewidth}{0.6pt}
-	\end{center}
-}
-
-\newenvironment{optionruled}
-{
-	\optionrule
-}
-{
-	\optionrule
-}
-
-% for use inside the collect environment
-\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
 
 \begin{document}
 
-\chapter*{Lauds on the Sunday with the Octave of the Epiphany\linebreak 9 January 2022}
+\chapter*{Lauds on the Sunday within the Octave of the Epiphany}
 
- \textit{All make the sign of the cross with the officiant as he begins:}
+\textit{All make the sign of the cross with the officiant as he begins:}
 
 \gresetinitiallines{1}
-\gregorioscore{../deus-in-adjutorium}
+\gregorioscore{../deus-in-adjutorium/deus-in-adjutorium}
 
 \section*{Psalm 92}
 
@@ -173,6 +85,7 @@
 Fratres: Obsécro vos per misericórdiam Dei,~\GreDagger\
 ut exhibeátis córpora vestra hóstiam vivéntem, sanctam, Deo placéntem,~*
 rationábile obséquium vestrum.
+
 \Rbar.~Deo grátias.
 
 \section*{Hymn}
@@ -181,9 +94,9 @@ rationábile obséquium vestrum.
 \gregorioscore{hymn-o-sola-magnarum}
 
 \begin{versicles}
-\Vbar. Omnes de Saba vénient, allelúja.
+\Vbar. Adoráte Deum, allelúja.
 
-\Rbar. Aurum et thus deferéntes, allelúja.
+\Rbar. Omnes Angeli ejus, allelúja.
 \end{versicles}
 
 \section*{Benedictus}
@@ -207,15 +120,15 @@ rationábile obséquium vestrum.
 Orémus.
 Vota, quǽsumus, Dómine, supplicántis pópuli cælésti pietáte proséquere:~\GreDagger\
 ut et quæ agénda sunt, vídeant,~*
-et ad implénda quæ víderint, convaléscant.
+et ad implénda quæ víderint, \textit{conva}\textbf{lés}cant.
 Per Dóminum.
 
 \Rbar.~Amen.
 
-\section*{Commemoration of the Octave of the Epiphany}
+\subsection*{Commemoration of the Octave of the Epiphany}
 
 \gresetinitiallines{1}
-\gregorioscore{ana-epiphany}
+\gregorioscore{ana-ad-benedictus}
 
 \begin{versicles}
 \Vbar. Omnes de Saba vénient, allelúja.
@@ -226,7 +139,7 @@ Per Dóminum.
 Orémus.
 Deus, qui hodiérna die Unigénitum tuum géntibus stella duce revelásti:~\GreDagger\
 concéde propítius; ut qui jam te ex fide cognóvimus,~*
-ad contemplándam spéciem tuæ celsitúdinis perducámur.
+ad contemplándam spéciem tuæ celsitúdinis \textit{perdu}\textbf{cá}mur.
 Per eúmdem.
 
 \Rbar.~Amen.
@@ -238,7 +151,7 @@ Per eúmdem.
 \end{versicles}
 
 \gresetinitiallines{1}
-\gregorioscore{../benedicamus-semidouble}
+\gregorioscore{../benedicamus/benedicamus-semidouble}
 
 \textit{In a low voice:}
 
