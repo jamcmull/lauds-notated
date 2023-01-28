@@ -1,3 +1,6 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
 \documentclass[11pt, twoside]{report}
 
 \usepackage{fontspec}
@@ -6,10 +9,7 @@
 \usepackage{bbding}
 \usepackage{ragged2e}
 \usepackage{parskip}
-\usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{paracol}
-\usepackage{mdframed}
 \usepackage[margin=1in]{geometry}
 
 \usepackage[autocompile]{gregoriotex}
@@ -17,99 +17,11 @@
 \titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1em}{}
 \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
 
-\mdfsetup{skipabove=\topskip, skipbelow=\topskip}
-
-\newcommand{\rubric}[1]{
-	\switchcolumn[0] {
-		\itshape
-		#1
-	}
-}
-
-\newcommand{\latinenglish}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape\small
-		#2
-	}
-}
-
-\newcommand{\latinenglishequal}[2]{
-	\switchcolumn[0]* {
-		#1
-	}
-	\switchcolumn[1] {
-		\itshape
-		#2
-	}
-}
-
-\newenvironment{latinenglishsection}
-	{\columnratio{.7, .3} \begin{paracol}{2}}
-	{\end{paracol}}
-
-\newenvironment{latinenglishequalsection}
-	{\columnratio{.5, .5}\begin{paracol}{2}}
-	{\end{paracol}}
-
-\setlength{\columnseprule}{0.4pt}
-
-\newcommand{\heading}[1]{
-	\begin{leftcolumn}
-		#1
-	\end{leftcolumn}
-}
-
-\newcommand{\spanning}[1]{
-	\switchcolumn*[#1]
-}
-
-\newenvironment{verses}[1]
-	{\begin{flushleft} \begin{enumerate}[leftmargin=*] \setcounter{enumi}{#1}}
-	{\end{enumerate} \end{flushleft}}
-
-\newenvironment{versicles}{\par\leavevmode\parskip=0pt}{}
-
-\newenvironment{collect}
-{
-	\leavevmode
-	\parindent=1em
-	\parskip=0pt
-	\noindent Orémus.\par
-}{}
-
-\newenvironment{optionbox}
-{
-	\switchcolumn[0]
-	\begin{mdframed}
-%	\begin{minipage}{0.8\linewidth}
-}{
-%	\end{minipage}
-	\end{mdframed}
-}
-
-\newcommand{\optionrule}{
-	\begin{center}
-	\rule{0.5\linewidth}{0.6pt}
-	\end{center}
-}
-
-\newenvironment{optionruled}
-{
-	\optionrule
-}
-{
-	\optionrule
-}
-
-% for use inside the collect environment
-\newcommand{\Amen}{\par\noindent \Rbar. Amen.}
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
 
 \begin{document}
 
-\chapter*{Lauds of the 3rd Sunday after Epiphany\\23 January 2022}
+\chapter*{Lauds of the 3rd Sunday after Epiphany\\22 January 2023}
 
 \section*{Benedictus}
 
@@ -118,52 +30,34 @@
 
 \input{../psalms/benedictus-8}
 
-\pagebreak
-
 \gresetinitiallines{0}
 \gregorioscore{ana-ben}
 
 \section*{Oration}
 
-Orémus.
 Omnípotens sempitérne Deus, infirmitátem nostram propítius réspice:~\GreDagger\
 atque, ad protegéndum nos,~*
-déxteram tuæ majestátis exténde.
+déxteram tuæ majestá\textit{tis ex}\textbf{tén}de.
 Per Dóminum.
 
 \Rbar.~Amen.
 
-\section*{Commemoration of St. Raymond of Penyafort, Confessor}
+\subsection*{Commemoration of Ss. Vincent and Anastasius, Martyrs}
 
 \gresetinitiallines{1}
-\gregorioscore{../commemorations/conf-non-pont}
+\gregorioscore{../commemorations/plur-mart}
 
 \begin{versicles}
-\Vbar. Justum dedúxit Dóminus per vias rectas.
+\Vbar. Exsultábunt Sancti in glória.
 
-\Rbar. Et osténdit illi regnum Dei.
+\Rbar. Lætabúntur in cubílibus suis.
 \end{versicles}
 
 Orémus.
-Deus, qui beátum Raymúndum pœniténtiæ sacraménti insígnem minístrum elegísti, et per maris undas mirabíliter traduxísti:~\GreDagger\
-concéde; ut ejus intercessióne dignos pœniténtiæ fructus fácere,~*
-et ad ætérnæ salútis portum perveníre valeámus.
+Adésto, Dómine, supplicatiónibus nostris:~\GreDagger\
+ut, qui ex iniquitáte nostra reos nos esse cognóscimus,~*
+beatórum Mártyrum tuórum Vincéntii et Anastásii intercessióne \textit{libe}\textbf{ré}mur.
 
-\section*{Commemoration of St. Emerentiana, Virgin and Martyr}
-
-\gresetinitiallines{1}
-\gregorioscore{../commemorations/one-virgin}
-
-\begin{versicles}
-\Vbar. Diffúsa est grátia in lábiis tuis.
-
-\Rbar. Proptérea benedíxit te Deus in ætérnum.
-\end{versicles}
-
-Orémus.
-Indulgéntiam nobis, quǽsumus, Dómine, beáta Emerentiána Virgo et Martyr implóret:~*
-quæ tibi grata semper éxstitit, et mérito castitátis, et tuæ professióne virtútis.
-
-\textit{The suffrages are said.}
+\textit{The suffrages are then said.}
 
 \end{document}
